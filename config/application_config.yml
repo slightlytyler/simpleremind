@@ -1,0 +1,22 @@
+defaults: &defaults
+  twilio_account_sid: "ACbc46c69b9da4d553ac8dfedae6039b9f"
+  twilio_auth_token: "686f125035cf73467e4e61842942b361"
+  twilio_from_number: "+17039977780"
+  sendgrid_increment: 500
+development:
+  # add stuff here to override defaults.
+  <<: *defaults
+  twilio_account_sid: "ACbc46c69b9da4d553ac8dfedae6039b9f"
+  twilio_auth_token: "686f125035cf73467e4e61842942b361"
+  twilio_from_number: "+15005550006"
+test:
+  <<: *defaults
+  # twilio_account_sid: "ACee0e491909f4aade9918a481bae69998"
+  # twilio_auth_token: "307033330885f83fd7fd10336fb57a7c"
+  # twilio_from_number: "+15005550006"
+production:
+  # add stuff here to override defaults.
+  <<: *defaults
+  twilio_account_sid: "ACbc46c69b9da4d553ac8dfedae6039b9f"
+  twilio_auth_token: "686f125035cf73467e4e61842942b361"
+  twilio_from_number: "+17039977780"

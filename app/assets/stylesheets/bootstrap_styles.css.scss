@@ -1,0 +1,17 @@
+//BS Overrides
+@import "bs-partials/variables";
+@import "bs-partials/mixins";
+
+//Importing Bootstrap core
+@import "bootstrap";
+@import "font-awesome";
+
+//Bootstrap overrides
+@import "bs-partials/overrides";
+
+//Utilities
+@import "bs-partials/utilities/*";
+
+//Custom classes and IDs
+@import "bs-partials/custom";
+@import "lib/simplemodal";
