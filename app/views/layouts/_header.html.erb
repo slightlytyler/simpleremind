@@ -1,7 +1,14 @@
-<% if user_signed_in? %>
-  <%= link_to 'Edit profile', edit_user_registration_path %> |
-  <%=link_to "Sign Out", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%=link_to "Login", new_user_session_path %>
-  <%=link_to "Sign Up", new_user_registration_path %>
-<% end %>
+<header id="main-nav" class="nav">
+  <section class="logo">
+    <span class="blue-main">simple</span><span class="gray-main">remind</span>
+  </section>
+  <section id="user-nav">
+    <% if user_signed_in? %>
+      <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-alt" %> |
+      <%=link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-main"  %>
+    <% else %>
+      <%=link_to "Login", new_user_session_path, class: "btn btn-alt"  %>
+      <%=link_to "Sign Up", new_user_registration_path, class: "btn btn-main"  %>
+    <% end %>
+  </section>
+</header>
