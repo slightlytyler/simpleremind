@@ -134,12 +134,19 @@ GEM
     jbuilder (2.1.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jquery-modal-rails (0.0.4)
+      jquery-ui-rails
+      railties (>= 3.2.0, < 5.0)
+      thor (~> 0.14)
+      uuidtools
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-turbolinks (2.0.2)
       railties (>= 3.1.0)
       turbolinks
+    jquery-ui-rails (4.2.1)
+      railties (>= 3.2.16)
     json (1.8.1)
     jwt (1.0.0)
     kgio (2.9.2)
@@ -312,6 +319,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    uuidtools (2.1.4)
     virtus (1.0.2)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
@@ -347,8 +355,10 @@ DEPENDENCIES
   guard-rspec
   hirb
   jbuilder (~> 2.0)
+  jquery-modal-rails
   jquery-rails
   jquery-turbolinks
+  jquery-ui-rails
   mailcatcher
   mocha
   pg

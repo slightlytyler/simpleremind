@@ -16,5 +16,6 @@
 //= require turbolinks
 //= require bootstrap
 //=	require public
-//=	require lib/simple-modal
 //= require lib/jquery-picture
+//= require jquery.ui.all
+//= require jquery.modal

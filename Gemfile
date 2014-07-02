@@ -51,6 +51,8 @@ gem "font-awesome-rails"
 gem 'sendgrid'
 gem "virtus"
 gem 'devise'
+gem 'jquery-ui-rails'
+gem 'jquery-modal-rails'
 
 group :development, :test do
   gem 'wirble'             # used to look better the console

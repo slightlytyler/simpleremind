@@ -13,4 +13,5 @@
  *= require_self
  *= require bootstrap_styles
  *= require fonts
+ *= require jquery.ui.all
  */

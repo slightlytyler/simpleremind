@@ -1,4 +1,18 @@
 .btn{ border-radius: 1px; }
+.btn-primary{ 
+  background-color: $blue-main; 
+
+  &:hover{
+    background-color: darken($blue-main, 10%);
+  }
+}
+.btn-default{ 
+  color: $blue-main; 
+
+  &:hover{
+    color: $blue-main;
+  }
+}
 
 .alert{
   padding: 0;
