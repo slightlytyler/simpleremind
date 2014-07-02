@@ -1,14 +1,22 @@
-<header id="main-nav" class="nav">
-  <section class="logo">
-    <span class="blue-main">simple</span><span class="gray-main">remind</span>
-  </section>
-  <section id="user-nav">
-    <% if user_signed_in? %>
-      <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-alt" %> |
-      <%=link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-main"  %>
-    <% else %>
-      <%=link_to "Login", new_user_session_path, class: "btn btn-alt"  %>
-      <%=link_to "Sign Up", new_user_registration_path, class: "btn btn-main"  %>
-    <% end %>
-  </section>
+<header id="main-nav" class="nav bg-white">
+  <div class="outer-container fill-vertical">
+    <section class="logo center-vertical">
+      <picture alt="simpleremind" id="simpleremind-logo" class="logo">
+        <source src="/assets/simpleremind-logo.png">
+        <source src="/assets/simpleremind-logo-2x.png" media="(min-resolution: 192dpi)">
+        <noscript>
+            <img src="/assets/simpleremind-logo.png" alt="simpleremind">
+        </noscript>
+    </picture>
+    </section>
+    <section id="user-nav" class="center-vertical">
+      <% if user_signed_in? %>
+        <%= link_to 'EDIT PROFILE', edit_user_registration_path, class: "btn btn-alt" %> |
+        <%=link_to "SIGN OUT", destroy_user_session_path, method: :delete, class: "btn btn-main"  %>
+      <% else %>
+        <%=link_to "LOGIN", new_user_session_path, class: "btn btn-alt"  %>
+        <%=link_to "SIGN UP", new_user_registration_path, class: "btn btn-main"  %>
+      <% end %>
+    </section>
+  </div>
 </header>

@@ -1,0 +1,15 @@
+.outer-container{
+    @include clearfix;
+    position: relative;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fill-horizontal{ width: 100%; }
+.fill-vertical{ height: 100%; }
+
+.center-vertical{ 
+  top: 50%;
+  transform: translateY(-50%);
+}

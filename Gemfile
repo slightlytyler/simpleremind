@@ -43,6 +43,7 @@ gem 'capistrano-rails', group: :development
 gem "sidekiq"
 gem 'twilio-ruby'
 gem "bootstrap-sass"
+gem "autoprefixer-rails"
 gem 'bootswatch-rails'
 gem "font-awesome-rails"
 gem 'sendgrid'

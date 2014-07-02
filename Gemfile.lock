@@ -31,6 +31,8 @@ GEM
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (2.1.0.20140628)
+      execjs
     awesome_print (1.2.0)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -324,6 +326,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  autoprefixer-rails
   awesome_print
   better_errors
   bootstrap-sass

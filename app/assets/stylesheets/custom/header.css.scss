@@ -1,0 +1,23 @@
+header#main-nav{
+  height: 112px;
+
+  section{
+    position: absolute;
+  }
+
+  .logo{
+    left: 0;
+  }
+}
+
+#simpleremind-logo img{
+  width: 300px;
+}
+
+#user-nav{
+  right: 0;
+
+  .btn{
+    min-width: 90px;
+  }
+}

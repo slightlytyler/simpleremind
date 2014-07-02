@@ -16,3 +16,4 @@
 //= require bootstrap
 //=	require public
 //=	require lib/simple-modal
+//= require lib/jquery-picture
