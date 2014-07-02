@@ -1,3 +1,4 @@
+// Global
 .outer-container{
     @include clearfix;
     position: relative;
@@ -6,9 +7,13 @@
     margin-right: auto;
 }
 
+.inline-list li{ display: inline-block; }
+
+// Fill Space
 .fill-horizontal{ width: 100%; }
 .fill-vertical{ height: 100%; }
 
+// Position
 .center-vertical{
   position: absolute;
   top: 50%;
@@ -29,3 +34,7 @@
 .center-horizontal-rel{
   margin: 0 auto;
 }
+
+// Style
+
+.circle{ border-radius: 50%; }

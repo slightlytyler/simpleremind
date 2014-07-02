@@ -1,0 +1,27 @@
+// Global
+body{ font-family: "proxima-nova",sans-serif; }
+
+.serif{ font-family: "adriane",serif; }
+
+.sans{ font-family: "proxima-nova",sans-serif; }
+
+// Headers
+h1,h2,h3,h4,h5,h6{ margin-top: 0; }
+
+h1{
+  font-weight: bold;
+  font-size: 6rem;
+}
+
+h3{
+  font-weight: lighter;
+  font-size: 3rem;
+}
+
+// Icons
+i.even{
+  display: inline-block; 
+  text-align:center;
+}
+i.l{ font-size: 8rem; }
+i.xl{ font-size: 12rem; }
