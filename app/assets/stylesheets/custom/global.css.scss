@@ -27,7 +27,7 @@
 
 .call-to-action{
   span, i { 
-    color: $blue-x-light; 
+    color: $blue-s-light; 
     font-size: 2.4rem;
   }
   span{ 
@@ -43,4 +43,27 @@
   span, i { display: block; }
   span{ margin-bottom: 12px;}
   i{ font-size: 4rem; }
+}
+
+.gist{
+  position: relative;
+  text-align: center;
+  padding: 5rem 0 8rem 0;
+
+  .icons{ margin-bottom: 24px; }
+
+  .dash{ margin-right: 24px; }
+
+  p{
+    font-style: italic;
+    font-size: 3rem;
+    max-width: $max-width-small;
+    @extend .center-horizontal-rel;
+  }
+
+  .border{
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+  }
 }

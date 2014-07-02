@@ -1,7 +1,8 @@
 // Colors
 $blue-main: #1a6fb0;
 $blue-light: #5cb2e4;
-$blue-x-light: #daf1ff;
+$blue-x-light: #b0dbf6;
+$blue-s-light: #daf1ff;
 $gray-main: #b4b4b4;
 $gray-book: #7f7f7f;
 $gray-dark: #424242;
@@ -16,6 +17,9 @@ $eggshell: #f2f2f2;
 
 .blue-x-light{ color: $blue-x-light; }
 .bg-blue-x-light{ background-color: $blue-x-light; }
+
+.blue-s-light{ color: $blue-s-light; }
+.bg-blue-s-light{ background-color: $blue-s-light; }
 
 .gray-main{ color: $gray-main; }
 .bg-gray-main{ background-color: $gray-main; }
@@ -39,3 +43,4 @@ $eggshell: #f2f2f2;
 
 // Grid
 $max-width: 1280px;
+$max-width-small: 960px;
