@@ -1,12 +1,3 @@
-// Variables
-if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-    var windowHeight = $(window).height();
-}
-else {
-    var windowHeight = $(window).height() + 70;
-}
-var windowWidth = $(window).width();
-
 // Init jquery picture
 $(function(){
     $('picture').picture();
@@ -15,7 +6,27 @@ $(function(){
 $(function() {
 
   // Variables
+  if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    var windowHeight = $(window).height();
+  }
+  else {
+      var windowHeight = $(window).height() + 70;
+  }
+
+  var windowWidth = $(window).width();
+
+  $(window).resize(function() { 
+    if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+        var windowHeight = $(window).height();
+    }
+    else {
+        var windowHeight = $(window).height() + 70;
+    }
+    var windowWidth = $(window).width();
+  });
+
   var headerHeight = $('#main-nav').outerHeight();
+
 
   // Index splash sizing
   $('#index-splash').height(windowHeight - headerHeight);
