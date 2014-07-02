@@ -1,10 +1,46 @@
 .splash{
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
+  background-color: black;
+  z-index: -2;
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .7;
+  }
 }
 
 .info-bar{
   overflow: hidden;
+  width: 100%;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.call-to-action{
+  span, i { 
+    color: $blue-x-light; 
+    font-size: 2.4rem;
+  }
+  span{ 
+    font-weight: lighter;
+    letter-spacing: .2rem;
+  }
+}
+
+.scroll-down{
+  text-align: center;
+  @extend .center-horizontal;
+  bottom: 24px;
+  span, i { display: block; }
+  span{ margin-bottom: 12px;}
+  i{ font-size: 4rem; }
 }

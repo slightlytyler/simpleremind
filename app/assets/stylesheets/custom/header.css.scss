@@ -21,5 +21,12 @@ header#main-nav{
 
   .btn{
     min-width: 90px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-right: 12px;
+
+    &:last-child{
+      margin-right: 0;
+    }
   }
 }

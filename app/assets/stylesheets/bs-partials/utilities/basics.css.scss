@@ -9,7 +9,19 @@
 .fill-horizontal{ width: 100%; }
 .fill-vertical{ height: 100%; }
 
-.center-vertical{ 
+.center-vertical{
+  position: absolute;
   top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-horizontal{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-vertical-rel{ 
+  margin-top: 50%;
   transform: translateY(-50%);
 }

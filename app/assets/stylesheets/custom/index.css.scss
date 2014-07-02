@@ -1,3 +1,12 @@
 #index-splash{
-  background-image: url('index-splash.jpg');
+  overflow: hidden;
+  position: relative;
+
+  &:after{
+    background-image: url('index-splash.jpg');
+  }
+
+  .info-bar{
+    span{ margin-right: 1rem; }
+  }
 }
