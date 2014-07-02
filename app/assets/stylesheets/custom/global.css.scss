@@ -61,12 +61,6 @@
     max-width: $max-width-small;
     @extend .center-horizontal-rel;
   }
-
-  .border{
-    position: absolute;
-    bottom: -12px;
-    left: 0;
-  }
 }
 
 .icon-bullet-points{
