@@ -5,6 +5,8 @@ $blue-x-light: #daf1ff;
 $gray-main: #b4b4b4;
 $gray-book: #7f7f7f;
 $gray-dark: #424242;
+$gray-light: #c3c3c3;
+$eggshell: #f2f2f2;
 
 .blue-main{ color: $blue-main; }
 .bg-blue-main{ background-color: $blue-main; }
@@ -23,6 +25,12 @@ $gray-dark: #424242;
 
 .gray-dark{ color: $gray-dark; }
 .bg-gray-dark{ background-color: $gray-dark; }
+
+.gray-light{ color: $gray-light; }
+.bg-gray-light{ background-color: $gray-light; }
+
+.eggshell { color: $eggshell; }
+.bg-eggshell { background-color: $eggshell; }
 
 .white { color: white; }
 .bg-white{ background-color: white; }

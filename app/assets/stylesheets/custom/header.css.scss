@@ -1,5 +1,7 @@
 header#main-nav{
   height: 112px;
+  border-bottom: 1px solid $eggshell;
+  box-shadow: 0px 2px 0px white;
 
   section{
     position: absolute;
