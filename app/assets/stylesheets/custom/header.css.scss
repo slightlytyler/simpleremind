@@ -1,5 +1,5 @@
 header#main-nav{
-  height: 112px;
+  height: 11.2rem;
   border-bottom: 1px solid $eggshell;
   box-shadow: 0px 2px 0px white;
 
@@ -8,22 +8,24 @@ header#main-nav{
   }
 
   .logo{
-    left: 0;
+    left: 12px;
+    width: 33%;
+    max-width: 300px;
   }
 }
 
 #simpleremind-logo img{
-  width: 300px;
+  width: 100%;
 }
 
 #user-nav{
-  right: 0;
+  right: 12px;
 
   .btn{
-    min-width: 90px;
+    min-width: 9rem;
     font-weight: bold;
     font-size: 1.6rem;
-    margin-right: 12px;
+    margin-right: 1.2rem;
 
     &:last-child{
       margin-right: 0;

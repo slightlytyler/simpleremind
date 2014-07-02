@@ -1,7 +1,7 @@
 footer#page-footer{
   padding: 40px 0;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 10rem;
 
   span, small{
     letter-spacing: .4rem;
@@ -14,13 +14,14 @@ footer#page-footer{
     margin-bottom: 20px;
   }
 
-  small { font-size: .8rem; }
+  small { font-size: 1rem; }
 }
 
 #footer-nav{
   position: relative;
   padding-bottom: 40px;
   margin-bottom: 40px;
+  line-height: 6rem;
 
   li{
     font-size: 1.8rem;
@@ -30,6 +31,12 @@ footer#page-footer{
 
     &:last-of-type{
       margin-right: 0;
+    }
+
+    @media (max-width: 640px){
+      &:first-of-type{
+        margin-left: 4rem;
+      }
     }
   }
 }
