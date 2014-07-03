@@ -1,0 +1,89 @@
+.login{
+  width: 100%;
+  padding: 1.2rem;
+  background-color: $blue-x-light;
+
+  h2{
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  input, a.btn{
+    display: inline-block;
+    width: 100%;
+    font-size: 2rem;
+    padding: 1.4rem 1.2rem;
+    border-radius: 2px;
+  }
+
+  input[type=email], input[type=password]{
+    margin-bottom: 1rem;
+    background-color: $blue-light;
+    color: white;
+    box-shadow: 0 -2px 0 $blue-main;
+    @include input-placeholder{
+      color: white;
+      text-transform:capitalize;
+    }
+  }
+
+  input[type=submit]{
+    margin-top: 2rem;
+  }
+}
+
+.remember-me label, .forgot-password{
+  color: white;
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+.remember-me{
+
+  input[type=checkbox] {
+    visibility: hidden;
+
+    &:checked{
+      & + label:before{ background-color: white; }
+      & + label:after{ background-color: $blue-main; }
+    }
+  }
+
+  label{
+    margin-left: 2rem;
+
+    &:before, &:after{
+      content: '';
+      position: absolute;
+      border-radius: 3px;
+    }
+
+    &:before{
+      width: 2.4rem;
+      height: 2.4rem;
+      border: 1px solid white;
+      left: .2rem;
+      margin-top: -.25rem;
+    }
+
+    &:after{
+      width: 1rem;
+      height: 1rem;
+      background-color: transparent;
+      left: .9rem;
+      margin-top: .45rem;
+    }
+  }
+}
+
+.forgot-password{
+  padding-top: 1.8rem;
+
+  a{
+    text-decoration: underline;
+  }
+}
+
+.alt-login-option{
+  margin-top: 6rem;
+}
