@@ -1,18 +1,42 @@
-<div class="login">
-  <h2><span class="blue-main">sign</span><span class="gray-main">up</span></h2>
+<div class="splash" id="sign-up-splash">
+  <div class="outer-container">
+    <div id="login-pricing" class="block slab block-brace center-horizontal-rel">
+      <span class="slabtext bold hard-shadow-blue-main blue-s-light">$29.99 / month</span>
+      <span class="slabtext hard-shadow gray-dark">unlimited reminders</span>
+      <span class="slabtext bold hard-shadow-blue-main white">just simple</span>
+    </div>
+    <div class="login page">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+        <section class="col-md-5 col-md-offset-1 col-sm-6">
+          <h2 class="white hard-shadow">sign up</span></h2>
+          <input class="floatlabel bg-blue-light-a" type="text" placeholder="Full Name" />
 
-    <%= f.email_field :email, autofocus: true, placeholder: :email %>
+          <input class="floatlabel bg-blue-light-a" type="text" placeholder="Company" />
 
-    <%= f.password_field :password, autocomplete: "off", placeholder: :password %>
+          <%= f.email_field :email, autofocus: true, placeholder: :email, class: 'floatlabel bg-blue-light-a' %>
 
-    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password again..." %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: :password, class: 'floatlabel bg-blue-light-a' %>
 
-    <%= f.submit "SIGN UP", class: "btn btn-default btn-lg" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password again...", class: 'floatlabel bg-blue-light-a' %>
+        </section>
 
-  <% end %>
+        <section class="col-md-5 col-sm-6">
+          <h2 class="white hard-shadow">billing info</h2>
 
-  <%= render "devise/shared/links" %>
+          <input class="floatlabel bg-blue-light-a" type="text" placeholder="Name on Card" />
+
+          <input class="floatlabel bg-blue-light-a" type="text" placeholder="CC #" />
+
+          <input class="short floatlabel bg-blue-light-a margin-right" type="text" placeholder="Expiration Date" /><input class="short floatlabel bg-blue-light-a margin-left" data-class="margin-left" type="text" placeholder="Sec Code" />
+
+          <%= f.submit "SIGN UP", class: "btn btn-default btn-lg" %>
+          <%= render "devise/shared/links" %>
+        </section>
+
+      <% end %>
+
+    </div>
+  </div>
 </div>

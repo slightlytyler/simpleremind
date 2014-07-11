@@ -1,6 +1,13 @@
-// Init jquery picture
+// Init jquery picture, float labels, fit text
 $(function(){
     $('picture').picture();
+    $('input.floatlabel').floatlabel({
+        slideInput: true,
+        labelStartTop: '-3em',
+        labelEndTop: '-2.5em',
+        transitionDuration: '0.3s'
+    });
+    $('.slab').slabText();
 });
 
 $(function() {

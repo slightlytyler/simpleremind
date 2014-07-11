@@ -8,9 +8,13 @@ html{
   }
 }
 .splash{
+  position: relative;
   width: 100%;
-  background-color: black;
-  z-index: -2;
+  background-color: rgba(120,137,145,1);
+
+  & > *{
+    z-index: 1;
+  }
 
   &:after{
     content: '';
@@ -19,11 +23,10 @@ html{
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: .7;
+    opacity: .35;
   }
 }
 
@@ -114,5 +117,29 @@ html{
     font-size: 2rem;
     line-height: 3rem;
     font-weight: lighter;
+  }
+}
+
+.block-brace span.slabtext:first-child{
+  position: relative;
+
+  &:before, &:after{
+    position: absolute;
+    top: 0;
+    font-size: 6em;
+    line-height: .6em;
+    font-weight: lighter;
+  }
+
+  &:before{
+    content:'{';
+    left: 0;
+    transform: translateX(-75%);
+  }
+
+  &:after{
+    content: '}';
+    right: 0;
+    transform: translateX(75%);
   }
 }

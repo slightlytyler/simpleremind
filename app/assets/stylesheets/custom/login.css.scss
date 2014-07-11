@@ -1,7 +1,16 @@
 .login{
-  width: 100%;
   padding: 1.2rem;
-  background-color: $blue-x-light;
+
+  &.modal-window{ 
+    width: 100%;
+    background-color: $blue-x-light; 
+
+    .alt-login-option{
+      margin-top: 2em;
+    }
+  }
+
+  &.page section{ margin-bottom: 3em; }
 
   h2{
     text-align: center;
@@ -14,13 +23,28 @@
     font-size: 2rem;
     padding: 1.4rem 1.2rem;
     border-radius: 2px;
+
+    &.short{ 
+      width: 46%;
+
+      &.margin-right{
+        margin-right: 4%;
+      }
+      
+      &.margin-left{
+        margin-left: 4%;
+        vertical-align: top;
+      }
+    }
   }
 
-  input[type=email], input[type=password]{
+  .label-floatlabel.margin-left{ margin-left: 8%; }
+
+  input[type=email], input[type=password], input[type=text]{
     margin-bottom: 1rem;
-    background-color: $blue-light;
     color: white;
     box-shadow: 0 -2px 0 $blue-main;
+    border: none;
     @include input-placeholder{
       color: white;
       text-transform:capitalize;
@@ -28,13 +52,13 @@
   }
 
   input[type=submit]{
-    margin-top: 2rem;
+    margin: 1em 0;
   }
 }
 
 .remember-me label, .forgot-password{
   color: white;
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 2rem;
 }
 
@@ -45,7 +69,10 @@
 
     &:checked{
       & + label:before{ background-color: white; }
-      & + label:after{ background-color: $blue-main; }
+      & + label:after{ 
+      color: $blue-main;
+      left: .2em;
+    }
     }
   }
 
@@ -67,11 +94,10 @@
     }
 
     &:after{
-      width: 1rem;
-      height: 1rem;
-      background-color: transparent;
-      left: .9rem;
-      margin-top: .45rem;
+      content: "\f00c";
+      font-family: FontAwesome;
+      left: -99999px;
+      margin-top: -.25em;
     }
   }
 }
@@ -80,10 +106,36 @@
   padding-top: 1.8rem;
 
   a{
-    text-decoration: underline;
+    border-bottom: 2px solid white;
+
+    &:hover{
+      text-decoration: none;
+    }
   }
 }
 
-.alt-login-option{
-  margin-top: 6rem;
+#login-pricing{
+  margin-bottom: 3em;
+  padding: 0 5em;
+  max-width: 400px;
+
+  @media (min-width: $screen-sm-min){
+    margin-bottom: 1em;
+  }
+
+  @media (min-width: $screen-md-min){
+    margin-bottom: 0;
+  }
+}
+
+#sign-up-splash{
+  padding-top: 3em;
+
+  &:after{
+    background-image: url('sign-up-splash.jpg');
+  }
+
+  & span.slabtext:first-child{
+    &:after, &:before { color: $blue-light; }
+  }
 }

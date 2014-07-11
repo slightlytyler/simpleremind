@@ -17,7 +17,7 @@
         <%=link_to "SIGN OUT", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
       <% else %>
         <%=link_to_modal "LOGIN", new_user_session_path, class: "btn btn-default" %>
-        <%=link_to_modal "SIGN UP", new_user_registration_path, class: "btn btn-primary" %>
+        <%=link_to "SIGN UP", new_user_registration_path, class: "btn btn-primary" %>
       <% end %>
     </section>
   </div>

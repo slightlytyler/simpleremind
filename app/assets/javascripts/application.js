@@ -17,5 +17,7 @@
 //= require bootstrap
 //=	require public
 //= require lib/jquery-picture
+//= require lib/float-label
+//= require lib/slab-text
 //= require jquery.ui.all
 //= require jquery.modal

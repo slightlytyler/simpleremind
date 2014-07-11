@@ -14,6 +14,7 @@
 // Fill Space
 .fill-horizontal{ width: 100%; }
 .fill-vertical{ height: 100%; }
+.block{ display: block; }
 
 // Position
 .center-vertical{
@@ -45,6 +46,8 @@
   margin: 0 auto;
 }
 
+.center-text{ text-align: center; }
+
 // Style
 .circle{ border-radius: 50%; }
 
@@ -56,3 +59,14 @@
     left: 0;
   }
 }
+
+.bold{ font-weight: bold; }
+
+.bolder{ font-weight: bolder; }
+
+//Fonts
+.hard-shadow{ text-shadow: 0 .05em 0 rgba(62,71,76,0.35); }
+.hard-shadow-light{ text-shadow: 0 .05em 0 rgba(235,245,255,0.35); }
+.hard-shadow-white{ text-shadow: 0 .05em 0 white; }
+.hard-shadow-blue-main{ text-shadow: 0 .05em 0 $blue-main; }
+.hard-shadow-blue-light{ text-shadow: 0 .05em 0 $blue-light; }

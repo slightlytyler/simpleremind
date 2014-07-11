@@ -22,8 +22,10 @@
     text-indent: -9999px;
     background: image-url('close.png') no-repeat 0 0;
     background-size: cover;
-    background-color: white;
+    background-color: $blue-x-light;
     border-radius: 50%;
+
+    &:hover{ background-color: $blue-light;}
   }
 }
 

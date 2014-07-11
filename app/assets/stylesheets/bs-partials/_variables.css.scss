@@ -1,6 +1,7 @@
 // Colors
 $blue-main: #1a6fb0;
 $blue-light: #5cb2e4;
+$blue-light-a: rgba(92, 178, 228, .5);
 $blue-x-light: #b0dbf6;
 $blue-s-light: #daf1ff;
 $gray-main: #b4b4b4;
@@ -14,6 +15,9 @@ $eggshell: #f2f2f2;
 
 .blue-light{ color: $blue-light; }
 .bg-blue-light{ background-color: $blue-light; }
+
+.blue-light-a{ color: $blue-light-a; }
+.bg-blue-light-a{ background-color: $blue-light-a; }
 
 .blue-x-light{ color: $blue-x-light; }
 .bg-blue-x-light{ background-color: $blue-x-light; }
