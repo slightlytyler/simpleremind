@@ -52,7 +52,7 @@
   }
 
   input[type=submit]{
-    margin: 1em 0;
+    margin: 3.28em 0 1.5em;
   }
 }
 
@@ -103,7 +103,7 @@
 }
 
 .forgot-password{
-  padding-top: 1.8rem;
+  padding-top: 1.06em;
 
   a{
     border-bottom: 2px solid white;
@@ -120,11 +120,7 @@
   max-width: 400px;
 
   @media (min-width: $screen-sm-min){
-    margin-bottom: 1em;
-  }
-
-  @media (min-width: $screen-md-min){
-    margin-bottom: 0;
+    margin-bottom: 2em;
   }
 }
 

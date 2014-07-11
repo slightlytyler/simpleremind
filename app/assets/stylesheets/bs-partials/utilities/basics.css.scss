@@ -59,10 +59,12 @@
     left: 0;
   }
 }
-
+.light{ font-weight: 400; }
+.lighter{ font-weight: lighter; }
 .bold{ font-weight: bold; }
-
 .bolder{ font-weight: bolder; }
+.italic{ font-style: italic; }
+.normal{ font-style: normal; }
 
 //Fonts
 .hard-shadow{ text-shadow: 0 .05em 0 rgba(62,71,76,0.35); }

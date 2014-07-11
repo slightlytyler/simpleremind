@@ -46,6 +46,16 @@ html{
     font-weight: lighter;
     letter-spacing: .2rem;
   }
+
+  .fa{ transition: all .3s ease-in-out; }
+  &:hover{
+    .fa-chevron-circle-right{ 
+      transform: translateX(1rem);
+    }
+    .fa-chevron-circle-down{ 
+      transform: translateY(1rem);
+    }
+  }
 }
 
 .scroll-down{
@@ -127,7 +137,7 @@ html{
     position: absolute;
     top: 0;
     font-size: 6em;
-    line-height: .6em;
+    line-height: .65em;
     font-weight: lighter;
   }
 
