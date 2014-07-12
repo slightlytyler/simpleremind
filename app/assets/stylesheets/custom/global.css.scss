@@ -1,9 +1,9 @@
 html{
-  @media (max-width: 768px){
+  @media (max-width: $screen-sm-min){
     font-size: 52.5%;
   }
 
-   @media (max-width: 480px){
+   @media (max-width: $screen-xs-min){
     font-size: 42.5%;
   }
 }
@@ -34,7 +34,7 @@ html{
   overflow: hidden;
   width: 100%;
   text-align: center;
-  padding: 5rem 0;
+  padding: 3.5em 1em;
 }
 
 .call-to-action{

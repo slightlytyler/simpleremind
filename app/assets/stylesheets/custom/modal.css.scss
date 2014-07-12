@@ -2,8 +2,8 @@
   display: none;
   width: 100%;
   height: auto;
-  background: #fff;
-  box-shadow: 0 0 10px #000;
+  background-color: transparent;
+  padding: 0 1em;
   max-width: 480px;;
   top: initial;
   bottom: initial;
@@ -14,8 +14,8 @@
 
   a.close-modal {
     position: absolute;
-    top: -12.5px;
-    right: -12.5px;
+    top: -16.5px;
+    right: -.5px;
     display: block;
     width: 30px;
     height: 30px;

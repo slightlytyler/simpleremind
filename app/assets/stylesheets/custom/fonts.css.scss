@@ -10,7 +10,11 @@ h1,h2,h3,h4,h5,h6{ margin-top: 0; }
 
 h1{
   font-weight: bold;
-  font-size: 6rem;
+  font-size: 4rem;
+
+  @media (min-width: $screen-sm-min){
+    font-size: 6rem;
+  }
 }
 
 h2{

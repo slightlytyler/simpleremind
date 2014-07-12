@@ -22,3 +22,20 @@
     </section>
   </div>
 </header>
+
+<% if user_signed_in? %>
+  <nav id="app-nav" class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav float-none-cascade center-text">
+        <%= nav_link((fa_icon "calendar"), "/calendar") %>
+        <%= nav_link (fa_icon "group"), "/contacts" %>
+        <%= nav_link (fa_icon "send"), "/send" %>
+        <%= nav_link (fa_icon "book"), "/reminders" %>
+        <%= nav_link (fa_icon "user"), edit_user_registration_path %>
+      </ul>
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div id="app-nav-push">
+  </div>
+<% end %>

@@ -1,16 +1,16 @@
 <div class="splash" id="sign-up-splash">
   <div class="outer-container">
-    <div id="login-pricing" class="block slab block-brace center-horizontal-rel">
+    <div id="login-pricing" class="block slab block-brace smooth-entry center-horizontal-rel">
       <span class="slabtext bold hard-shadow-blue-main blue-s-light"><span class="serif italic">$29.99</span> / <span class="lighter">month</span></span>
-      <span class="slabtext hard-shadow gray-dark">unlimited reminders</span>
+      <span class="slabtext hard-shadow-light gray-dark">unlimited reminders</span>
       <span class="slabtext lighter hard-shadow-blue-main white">just <span class="serif italic">simple</span></span>
     </div>
-    <div class="login page">
+    <div class="login page smooth-entry">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
 
         <section class="col-md-5 col-md-offset-1 col-sm-6">
-          <h2 class="white hard-shadow">sign up</span></h2>
+          <h2 class="white hard-shadow"><%= fa_icon "user" %> sign up</span></h2>
           <input class="floatlabel bg-blue-light-a" type="text" placeholder="Full Name" />
 
           <input class="floatlabel bg-blue-light-a" type="text" placeholder="Company" />
@@ -23,7 +23,7 @@
         </section>
 
         <section class="col-md-5 col-sm-6">
-          <h2 class="white hard-shadow">billing info</h2>
+          <h2 class="white hard-shadow"><%= fa_icon "credit-card" %> billing info</h2>
 
           <input class="floatlabel bg-blue-light-a" type="text" placeholder="Name on Card" />
 

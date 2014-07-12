@@ -17,6 +17,16 @@
 .block{ display: block; }
 
 // Position
+.float-none{ float: none; }
+
+.float-none-cascade{ 
+  float: none; 
+
+  & > *{ 
+    float: none !important;  
+    display: inline-block !important;
+  } 
+}
 .center-vertical{
   position: absolute;
   top: 50%;

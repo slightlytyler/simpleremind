@@ -4,13 +4,19 @@
   &.modal-window{ 
     width: 100%;
     background-color: $blue-x-light; 
+    box-shadow: 0 0 10px #000;
+
+    input[type=submit]{ margin: 1em 0; }
 
     .alt-login-option{
       margin-top: 2em;
     }
   }
 
-  &.page section{ margin-bottom: 3em; }
+  &.page{
+    input[type=submit]{  margin: 3.28em 0 1.5em; }
+    section{ margin-bottom: 3em; }
+  }
 
   h2{
     text-align: center;
@@ -49,10 +55,6 @@
       color: white;
       text-transform:capitalize;
     }
-  }
-
-  input[type=submit]{
-    margin: 3.28em 0 1.5em;
   }
 }
 

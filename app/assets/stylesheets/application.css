@@ -12,7 +12,6 @@
  *
  *= require_self
  *= require bootstrap_styles
- *= require fonts
  *= require font-awesome
  *= require jquery.ui.all
  */
