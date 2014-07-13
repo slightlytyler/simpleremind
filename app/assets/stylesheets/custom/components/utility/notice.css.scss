@@ -1,0 +1,15 @@
+.notice{
+  position: fixed;
+  z-index: 9999;
+  text-align: center;
+  top: 0;
+  @extend .bg-blue-main;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: .1em 0;
+  font-weight: bolder;
+  @extend .white;
+  @extend .hard-shadow-box;
+  @extend .slide-in;
+  @extend .notice-slide;
+}

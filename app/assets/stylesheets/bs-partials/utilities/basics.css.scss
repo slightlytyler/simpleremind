@@ -76,9 +76,12 @@
 .italic{ font-style: italic; }
 .normal{ font-style: normal; }
 
-//Fonts
+// Font Shadows
 .hard-shadow{ text-shadow: 0 .05em 0 rgba(62,71,76,0.35); }
 .hard-shadow-light{ text-shadow: 0 .05em 0 rgba(235,245,255,0.35); }
 .hard-shadow-white{ text-shadow: 0 .05em 0 white; }
 .hard-shadow-blue-main{ text-shadow: 0 .05em 0 $blue-main; }
 .hard-shadow-blue-light{ text-shadow: 0 .05em 0 $blue-light; }
+
+// Box Shadows
+.hard-shadow-box{ box-shadow: 0 .05em 0 rgba(62,71,76,0.35); }

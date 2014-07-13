@@ -1,3 +1,5 @@
+//
+
 @keyframes smooth-entry {
   from {
     opacity: 0;
@@ -11,6 +13,8 @@
 
 .smooth-entry{ animation: smooth-entry 1s; }
 
+//
+
 @keyframes smooth-entry-short {
   from {
     opacity: 0;
@@ -21,6 +25,61 @@
     transform: translateY(0);
   }
 }
+
+//
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.slide-in{ animation: slide-in .3s; }
+
+//
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.slide-out{ animation: slide-out .3s; }
+.slide-out-delay{ 
+  animation: slide-out .3s; 
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+//
+
+ @keyframes notice-slide {
+  0% {
+    transform: translateY(-100%);
+  }
+  8% {
+    transform: translateY(0);
+  }
+  92% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.notice-slide{ 
+  animation: notice-slide 3.6s; 
+  animation-fill-mode: forwards;
+}
+
+//
 
 @keyframes fade {
   from {
