@@ -24,14 +24,7 @@ $(function() {
   var headerHeight = $('#main-nav').outerHeight();
   var appNavHeight = $('#app-nav').outerHeight();
 
-  var rem = function rem() {
-    var html = document.getElementsByTagName('html')[0];
-
-    return function () {
-        return parseInt(window.getComputedStyle(html)['fontSize']);
-    }
-  }();
-
+  // Get current rem
   var current_rem = rem();
 
   $(window).resize(function() { 
@@ -49,27 +42,18 @@ $(function() {
     current_rem = rem();
   });
 
-  console.log(current_rem);
-
   // Index splash sizing
   $('#index-splash').height(windowHeight - headerHeight - appNavHeight);
-  console.log(windowHeight);
-  console.log(headerHeight);
-  console.log(appNavHeight);
 
-  // App nav sticky
-  $(window).scroll(function () { 
-
-    console.log($(window).scrollTop());
-
-    if ($(window).scrollTop() > (11.2 * current_rem)) {
-      $('#app-nav').addClass('navbar-fixed-top');
-      $('#app-nav-push').addClass('show');
-    }
-
-    if ($(window).scrollTop() < (11.2 * current_rem)) {
-      $('#app-nav').removeClass('navbar-fixed-top');
-      $('#app-nav-push').removeClass('show');
-    }
-  });
+  // Tab Bar
+  tabBar(headerHeight, "#app-nav");
 });
+
+// Get rem
+var rem = function rem() {
+  var html = document.getElementsByTagName('html')[0];
+
+  return function () {
+      return parseInt(window.getComputedStyle(html)['fontSize']);
+  }
+}();
