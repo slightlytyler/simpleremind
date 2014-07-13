@@ -21,20 +21,50 @@ $(function() {
   }
 
   var windowWidth = $(window).width();
+  var headerHeight = $('#main-nav').outerHeight();
+
+  var rem = function rem() {
+    var html = document.getElementsByTagName('html')[0];
+
+    return function () {
+        return parseInt(window.getComputedStyle(html)['fontSize']);
+    }
+  }();
+
+  var current_rem = rem();
 
   $(window).resize(function() { 
     if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-        var windowHeight = $(window).height();
+        windowHeight = $(window).height();
     }
     else {
-        var windowHeight = $(window).height() + 70;
+        windowHeight = $(window).height() + 70;
     }
-    var windowWidth = $(window).width();
+
+    windowWidth = $(window).width();
+    headerHeight = $('#main-nav').outerHeight();
+
+    current_rem = rem();
   });
 
-  var headerHeight = $('#main-nav').outerHeight();
-
+  console.log(current_rem);
 
   // Index splash sizing
   $('#index-splash').height(windowHeight - headerHeight);
+
+  // App nav sticky
+  $(window).scroll(function () { 
+
+    console.log($(window).scrollTop());
+
+    if ($(window).scrollTop() > (11.2 * current_rem)) {
+      $('#app-nav').addClass('navbar-fixed-top');
+      $('#app-nav-push').addClass('show');
+    }
+
+    if ($(window).scrollTop() < (11.2 * current_rem)) {
+      $('#app-nav').removeClass('navbar-fixed-top');
+      $('#app-nav-push').removeClass('show');
+    }
+  });
 });
