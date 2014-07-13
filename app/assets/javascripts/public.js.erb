@@ -1,17 +1,5 @@
 // Init jquery picture, float labels, fit text
 $(function(){
-    $('picture').picture();
-    $('input.floatlabel').floatlabel({
-        slideInput: true,
-        labelStartTop: '-2.5em',
-        labelEndTop: '-2.5em',
-        transitionDuration: '0.3s'
-    });
-    $('.slab').slabText();
-});
-
-$(function() {
-
   // Variables
   if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
     var windowHeight = $(window).height();
@@ -24,9 +12,6 @@ $(function() {
   var headerHeight = $('#main-nav').outerHeight();
   var appNavHeight = $('#app-nav').outerHeight();
 
-  // Get current rem
-  var current_rem = rem();
-
   $(window).resize(function() { 
     if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
         windowHeight = $(window).height();
@@ -38,22 +23,24 @@ $(function() {
     windowWidth = $(window).width();
     headerHeight = $('#main-nav').outerHeight();
     appNavHeight = $('#app-nav').outerHeight();
-
-    current_rem = rem();
   });
+  //////
+
+  // Init jquery picture
+  $('picture').picture();
+  // Init float labels
+  $('input.floatlabel').floatlabel({
+      slideInput: true,
+      labelStartTop: '-2.5em',
+      labelEndTop: '-2.5em',
+      transitionDuration: '0.3s'
+  });
+  // Init slab text
+  $('.slab').slabText();
+
+  // Init tab bar
+  $('#app-nav').tabBar(headerHeight);
 
   // Index splash sizing
   $('#index-splash').height(windowHeight - headerHeight - appNavHeight);
-
-  // Tab Bar
-  tabBar(headerHeight, "#app-nav");
 });
-
-// Get rem
-var rem = function rem() {
-  var html = document.getElementsByTagName('html')[0];
-
-  return function () {
-      return parseInt(window.getComputedStyle(html)['fontSize']);
-  }
-}();
