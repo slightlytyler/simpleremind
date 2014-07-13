@@ -22,6 +22,7 @@ $(function() {
 
   var windowWidth = $(window).width();
   var headerHeight = $('#main-nav').outerHeight();
+  var appNavHeight = $('#app-nav').outerHeight();
 
   var rem = function rem() {
     var html = document.getElementsByTagName('html')[0];
@@ -43,6 +44,7 @@ $(function() {
 
     windowWidth = $(window).width();
     headerHeight = $('#main-nav').outerHeight();
+    appNavHeight = $('#app-nav').outerHeight();
 
     current_rem = rem();
   });
@@ -50,7 +52,10 @@ $(function() {
   console.log(current_rem);
 
   // Index splash sizing
-  $('#index-splash').height(windowHeight - headerHeight);
+  $('#index-splash').height(windowHeight - headerHeight - appNavHeight);
+  console.log(windowHeight);
+  console.log(headerHeight);
+  console.log(appNavHeight);
 
   // App nav sticky
   $(window).scroll(function () { 

@@ -38,3 +38,12 @@
 input[type=email], input[type=password]{
   border: none;
 }
+
+.nav > li > a{
+  padding: 1rem 1.5rem;
+}
+
+.navbar-nav > li > a{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
