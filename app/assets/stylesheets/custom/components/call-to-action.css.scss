@@ -1,0 +1,29 @@
+.call-to-action{
+  span, i { 
+    color: $blue-s-light; 
+    font-size: 2.4rem;
+  }
+  span{ 
+    font-weight: lighter;
+    letter-spacing: .2rem;
+  }
+
+  .fa{ transition: all .3s ease-in-out; }
+  &:hover{
+    .fa-chevron-circle-right{ 
+      transform: translateX(1rem);
+    }
+    .fa-chevron-circle-down{ 
+      transform: translateY(1rem);
+    }
+  }
+}
+
+.scroll-down{
+  text-align: center;
+  @extend .center-horizontal;
+  bottom: 24px;
+  span, i { display: block; }
+  span{ margin-bottom: 12px;}
+  i{ font-size: 4rem; }
+}

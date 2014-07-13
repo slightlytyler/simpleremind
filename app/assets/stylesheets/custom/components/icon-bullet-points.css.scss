@@ -1,0 +1,31 @@
+.icon-bullet-points{
+  text-align: center;
+  padding: 18rem 0 8rem;
+
+  @media (max-width: 480px){
+    padding: 8rem 0 6rem;
+  }
+
+  li{
+    margin-bottom: 6rem;
+  }
+
+  i{
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+    margin-bottom: 6rem;
+
+    &:before{
+      @extend .center-absolute;
+    }
+  }
+
+  h3{ margin-bottom: 4rem; }
+
+  p{ 
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: lighter;
+  }
+}

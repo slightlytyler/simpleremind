@@ -1,0 +1,21 @@
+#login-pricing{
+  margin-bottom: 3em;
+  padding: 0 5em;
+  max-width: 400px;
+
+  @media (min-width: $screen-sm-min){
+    margin-bottom: 2em;
+  }
+}
+
+#sign-up-splash{
+  padding-top: 3em;
+
+  &:after{
+    background-image: url('sign-up-splash.jpg');
+  }
+
+  & span.slabtext:first-child{
+    &:after, &:before { color: $blue-light; }
+  }
+}

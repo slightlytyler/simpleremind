@@ -1,0 +1,30 @@
+.gist{
+  position: relative;
+  text-align: center;
+  padding: 6rem 0 10rem;
+
+  .icons{ margin-bottom: 24px; }
+
+  .dash{ 
+    width: 18rem;
+    height: 10rem;
+    margin-right: 2.4rem; 
+
+    @media (max-width: 480px){
+      width: 8rem;
+      margin-right: 1.4rem;
+
+      line{
+        transform: translateY(3rem);
+      }
+    }
+  }
+
+  p{
+    font-style: italic;
+    font-size: 3rem;
+    line-height: 5rem;
+    max-width: $max-width-small;
+    @extend .center-horizontal-rel;
+  }
+}

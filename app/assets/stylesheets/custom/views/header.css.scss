@@ -17,17 +17,3 @@ header#main-nav{
 .simpleremind-logo img{
   width: 100%;
 }
-
-#user-nav{
-  right: 12px;
-
-  .btn{
-    min-width: 9rem;
-    font-size: 1.6rem;
-    margin-right: 1.2rem;
-
-    &:last-child{
-      margin-right: 0;
-    }
-  }
-}

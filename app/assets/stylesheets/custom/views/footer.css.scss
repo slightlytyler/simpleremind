@@ -1,0 +1,23 @@
+footer#page-footer{
+  padding: 40px 0;
+  text-align: center;
+  margin-bottom: 4em;
+
+  span, small{
+    letter-spacing: .4rem;
+  }
+
+  span{
+    display: block;
+    font-weight: lighter;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  small { font-size: 1rem; }
+}
+
+#tennium-logo img{
+  width: 140px;
+  margin-bottom: 20px;
+}

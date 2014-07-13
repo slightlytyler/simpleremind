@@ -1,0 +1,23 @@
+.block-brace span.slabtext:first-child{
+  position: relative;
+
+  &:before, &:after{
+    position: absolute;
+    top: 0;
+    font-size: 6em;
+    line-height: .65em;
+    font-weight: lighter;
+  }
+
+  &:before{
+    content:'{';
+    left: 0;
+    transform: translateX(-75%);
+  }
+
+  &:after{
+    content: '}';
+    right: 0;
+    transform: translateX(75%);
+  }
+}

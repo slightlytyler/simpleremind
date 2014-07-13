@@ -1,0 +1,23 @@
+#footer-nav{
+  position: relative;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  line-height: 6rem;
+
+  li{
+    font-size: 1.8rem;
+    margin-right: 4rem;
+    font-weight: bold;
+    letter-spacing: .4rem;
+
+    &:last-of-type{
+      margin-right: 0;
+    }
+
+    @media (max-width: 640px){
+      &:first-of-type{
+        margin-left: 4rem;
+      }
+    }
+  }
+}
