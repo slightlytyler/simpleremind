@@ -39,12 +39,22 @@ $(function(){
   // Init tab bar
   $('#app-nav').tabBar(headerHeight);
 
-  smoothHashNav(appNavHeight);
-
   // Index splash sizing
   $('.full-page').height(windowHeight - headerHeight - appNavHeight);
 
   $(window).resize(function() {
     $('.splash.full-page').height(windowHeight - headerHeight - appNavHeight); 
   });
+
+  // Size specific functions
+  //
+  // Mobile size only
+  if( ($('#app-nav').offset().top + $('#app-nav').height() > ($(window).scrollTop() + $(window).height() - 20))) {
+    smoothHashNav(0);
+  }
+  // Not mobile size
+  else {
+    // Init smooth hash scrolling
+    smoothHashNav(appNavHeight);
+  }
 });
