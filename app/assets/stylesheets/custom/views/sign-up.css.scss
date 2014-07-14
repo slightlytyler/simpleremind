@@ -12,7 +12,7 @@
   padding-top: 3em;
 
   &:after{
-    background-image: url('sign-up-splash.jpg');
+    @include at2x('sign-up-splash', jpg, cover, cover);
   }
 
   & span.slabtext:first-child{

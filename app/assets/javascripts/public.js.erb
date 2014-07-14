@@ -26,8 +26,6 @@ $(function(){
   });
   //////
 
-  // Init jquery picture
-  $('picture').picture();
   // Init float labels
   $('input.floatlabel').floatlabel({
       slideInput: true,
@@ -41,6 +39,12 @@ $(function(){
   // Init tab bar
   $('#app-nav').tabBar(headerHeight);
 
+  smoothHashNav(appNavHeight);
+
   // Index splash sizing
-  $('#index-splash').height(windowHeight - headerHeight - appNavHeight);
+  $('.full-page').height(windowHeight - headerHeight - appNavHeight);
+
+  $(window).resize(function() {
+    $('.splash.full-page').height(windowHeight - headerHeight - appNavHeight); 
+  });
 });

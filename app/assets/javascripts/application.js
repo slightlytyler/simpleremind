@@ -16,9 +16,10 @@
 //= require turbolinks
 //= require bootstrap
 //= require public
-//= require lib/jquery-picture
-//= require lib/float-label
-//= require lib/slab-text
+//= require lib/utility/float-label
+//= require lib/utility/slab-text
+//= require lib/utility/retina
+//= require lib/utility/smooth-hash-nav
 //= require lib/components/tab-bar
 //= require jquery.ui.all
 //= require jquery.modal

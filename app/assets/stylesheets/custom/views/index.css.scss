@@ -2,6 +2,6 @@
   overflow: hidden;
 
   &:after{
-    background-image: url('index-splash.jpg');
+    @include at2x('index-splash', jpg, cover, cover);
   }
 }

@@ -1,3 +1,12 @@
+/**
+ * Tab Bar Componenet
+ * URL:
+ * Author: Tyler Martinez ( http://www.slightlytyler.com )
+ * Copyright: Copyright 2014 http://www.slightlytyler.com
+ *
+ * Component for bootstrap projects.
+ */
+
 (function( $ ){
   $.fn.tabBar = function(headerHeight) {
     var headerHeight = headerHeight;
