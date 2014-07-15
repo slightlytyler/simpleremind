@@ -9,3 +9,21 @@
 
   .title{ margin-top: 1em;}
 }
+
+#reminder-sidebar-toggle{
+  position: absolute;
+  top: 3rem;
+  right: 0;
+
+  i.fa{ 
+    font-size: 3rem;
+    padding: .2em;
+    padding-right: .4em;
+    background-color: white;
+  }
+}
+
+#sidr{
+  position: absolute;
+  background-color: white;
+}

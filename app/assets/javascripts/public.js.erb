@@ -38,6 +38,12 @@ $(function(){
 
   // Init tab bar
   $('#app-nav').tabBar(headerHeight);
+  
+  // Init reminder side bar
+  $('#reminder-sidebar-toggle').sidr({
+    side: 'right',
+    body: '#send-page .outer-container'
+  });
 
   // Index splash sizing
   $('.splash.full-page').css('min-height', windowHeight - headerHeight - appNavHeight); 

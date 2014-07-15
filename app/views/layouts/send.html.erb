@@ -1,7 +1,7 @@
 <div id="send-page" class="splash full-page">
   <div class="outer-container">
-    <h2 class="title white smooth-entry hard-shadow">Send a reminder.</h2>
     <form class="new-reminder center-horizontal-rel smooth-entry">
+      <h2 class="title white smooth-entry hard-shadow">Send a reminder.</h2>
       <input class="floatlabel styled bg-blue-light-a" placeholder="To" data-label="Recepient" type="text" />
       <input class="floatlabel styled bg-blue-light-a" placeholder="Phone #" type="text" />
       <h4 class="white hard-shadow left-text">Reminder:</h4>
@@ -9,5 +9,15 @@
       <input class="col-md-6 col-sm-6 col-xs-6 btn btn-hollow" name="Send Now" value="Send Now" type="submit" />
       <a class="col-md-6 col-sm-6 col-xs-6 btn btn-default" name="Send Later" >Send Later</a>
     </form>
+
+    <a id="reminder-sidebar-toggle" href="#sidr"><%= fa_icon "chevron-left" %></a>
+  </div>
+ 
+  <div id="sidr">
+    <ul>
+      <li><a>List 1</a></li>
+      <li><a>List 2</a></li>
+      <li><a>List 3</a></li>
+    </ul>
   </div>
 </div>
