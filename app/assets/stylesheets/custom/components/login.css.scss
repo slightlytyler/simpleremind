@@ -3,8 +3,6 @@
 
   &.modal-window{ 
     width: 100%;
-    background-color: $blue-x-light; 
-    box-shadow: 0 0 10px #000;
 
     input[type=submit]{ margin: 1em 0; }
 
@@ -18,9 +16,9 @@
     section{ margin-bottom: 3em; }
   }
 
-  h2{
+  .title{
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1em;
   }
 
   a.btn, input.btn{
@@ -33,7 +31,7 @@
 .remember-me label, .forgot-password{
   color: white;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .remember-me{
@@ -45,7 +43,8 @@
       & + label:before{ background-color: white; }
       & + label:after{ 
       color: $blue-main;
-      left: .2em;
+      left: .5rem;
+      top: .2rem;
     }
     }
   }
@@ -77,13 +76,7 @@
 }
 
 .forgot-password{
-  padding-top: 1.06em;
-
   a{
     border-bottom: 2px solid white;
-
-    &:hover{
-      text-decoration: none;
-    }
   }
 }

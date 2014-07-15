@@ -6,6 +6,8 @@ label.label-floatlabel{
 
   &.focus{
     color: $blue-main !important;
+
+    &.light{ color: $blue-light}
   }
 }
 
