@@ -1,0 +1,63 @@
+#reminder-sidebar-toggle{
+  position: absolute;
+  top: 3rem;
+  right: 0;
+
+  i.fa{ 
+    font-size: 3rem;
+    padding: .2em;
+    padding-right: .4em;
+    @extend .bg-burn;
+    color: $blue-light;
+
+    &:hover{ color: $blue-main; }
+  }
+}
+
+.sidr.reminder-sidebar{
+  position: absolute;
+  padding-top: 3em;
+
+  .column-headers{ margin-top: 1.6em; }
+
+  .label{ 
+    display: inline-block;
+    text-align: left;
+    border-bottom: 2px solid white;
+    padding: 0;
+    padding-right: 1em;
+    color: $gray-light;
+  }
+
+  ul{ margin-top: .5em; }
+
+  li{ 
+    @extend .clearfix;
+    margin-bottom: .4em; 
+    padding: .2em 0;
+    border-bottom: 1px dashed rgba(255,255,255,.35);
+
+    &.delivered span{ 
+      color: $gray-dark; 
+      text-decoration: line-through;
+    }
+    &.failed span{ color: salmon; }
+  }
+
+  span{ 
+    display: block; 
+    color: $blue-light;
+    @extend .hard-shadow;
+  }
+
+  .date, .recipient{ float: left; }
+
+  .date{
+    width: 40%;
+    vertical-align: top;
+  }
+
+  .recipient{
+    width: 60%;
+  }
+}

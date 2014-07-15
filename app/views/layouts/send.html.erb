@@ -1,4 +1,4 @@
-<div id="send-page" class="splash full-page">
+<div id="send-page" class="splash full-page-app">
   <div class="outer-container">
     <form class="new-reminder center-horizontal-rel smooth-entry">
       <h2 class="title white smooth-entry hard-shadow">Send a reminder.</h2>
@@ -10,14 +10,56 @@
       <%= link_to_modal "Send Later", '/send-later', name: 'Send Letter', class: 'col-md-6 col-sm-6 col-xs-6 btn btn-default' %>
     </form>
 
-    <a id="reminder-sidebar-toggle" href="#sidr"><%= fa_icon "chevron-left" %></a>
+    <a id="reminder-sidebar-toggle" href="#sidr"><%= fa_icon "chevron-left", class: 'hard-shadow' %></a>
   </div>
  
-  <div id="sidr">
+  <div id="sidr" class="reminder-sidebar bg-burn">
+    <h4 class="white hard-shadow">Upcoming Reminders</h4>
+    <div class="clearfix column-headers">
+      <section class="date">
+        <h5 class="label">Date</h5>
+      </section>
+      <section class="recipient">
+        <h5 class="label">Recipient</h5>
+      </section>
+    </div>
     <ul>
-      <li><a>List 1</a></li>
-      <li><a>List 2</a></li>
-      <li><a>List 3</a></li>
+      <li><a>
+        <section class="date">
+          <span>7/6/14</span>
+        </section>
+        <section class="recipient">
+          <span>Sarah Lee</span>
+          <span>(972) 772 5142</span>
+        </section>
+      </a></li>
+      <li class="delivered"><a>
+        <section class="date">
+          <span>7/4/14</span>
+        </section>
+        <section class="recipient">
+          <span>John Doe</span>
+          <span>(214) 901 6983</span>
+        </section>
+      </a></li>
+      <li class="failed"><a>
+        <section class="date">
+          <span>7/3/14</span>
+        </section>
+        <section class="recipient">
+          <span>Greg Andrews</span>
+          <span>(489) 430 0071</span>
+        </section>
+      </a></li>
+      <li class="delivered"><a>
+        <section class="date">
+          <span>7/3/14</span>
+        </section>
+        <section class="recipient">
+          <span>Lynn Flint</span>
+          <span>(972) 978 3111</span>
+        </section>
+      </a></li>
     </ul>
   </div>
 </div>

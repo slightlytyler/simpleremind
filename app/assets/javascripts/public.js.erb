@@ -47,9 +47,11 @@ $(function(){
 
   // Index splash sizing
   $('.splash.full-page').css('min-height', windowHeight - headerHeight - appNavHeight); 
+  $('.splash.full-page-app').css('min-height', windowHeight - appNavHeight); 
 
   $(window).resize(function() {
     $('.splash.full-page').css('min-height', windowHeight - headerHeight - appNavHeight); 
+    $('.splash.full-page-app').css('min-height', windowHeight - appNavHeight); 
   });
 
   // Size specific functions

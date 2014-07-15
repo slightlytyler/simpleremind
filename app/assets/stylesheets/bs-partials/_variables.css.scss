@@ -9,6 +9,7 @@ $gray-book: #7f7f7f;
 $gray-dark: #424242;
 $gray-light: #c3c3c3;
 $eggshell: #f2f2f2;
+$burn: rgba(0,0,0,.3);
 
 .blue-main{ color: $blue-main; }
 .bg-blue-main{ background-color: $blue-main; }
@@ -43,7 +44,7 @@ $eggshell: #f2f2f2;
 .white { color: white; }
 .bg-white{ background-color: white; }
 
-.bg-burn { background-color: rgba(0,0,0,.3); }
+.bg-burn { background-color: $burn; }
 
 // Grid
 $max-width: 1280px;
