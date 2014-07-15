@@ -58,7 +58,8 @@ function pageLoad(){
   // Size specific functions
   //
   // Mobile size only
-  if( ($('#app-nav').offset().top + $('#app-nav').height() > ($(window).scrollTop() + $(window).height() - 20))) {
+
+  if ($('html').css('font-size') == '42.5%') {
     smoothHashNav(0);
   }
   // Not mobile size

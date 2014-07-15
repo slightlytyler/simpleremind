@@ -24,6 +24,7 @@
       font-family: FontAwesome;
       font-size: 3rem;
       @extend .white;
+      @extend .hard-shadow;
 
       &:hover{ color: $blue-s-light}
     }
