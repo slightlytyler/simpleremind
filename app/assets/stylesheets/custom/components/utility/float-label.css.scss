@@ -1,8 +1,14 @@
-.label-floatlabel{
+label.label-floatlabel{
   animation: smooth-entry-short .3s;
   text-transform: capitalize;
+  @extend .hard-shadow;
+  color: $gray-light;
+
+  &.focus{
+    color: $blue-main !important;
+  }
 }
 
-.floatlabel-wrapper{
-  display: inline;
+.floatlabel-wrapper.inline{
+  display: inline-block;
 }

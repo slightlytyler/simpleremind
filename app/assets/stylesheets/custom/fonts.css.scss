@@ -27,6 +27,11 @@ h3{
   font-size: 3rem;
 }
 
+h4{
+  @extend h2;
+  font-size: 2rem;
+}
+
 // Icons
 i.even{
   display: inline-block; 

@@ -1,7 +1,11 @@
 #send-page{
   background-color: $gray-light;
+  text-align: center;
+
   &:after{
     @include at2x('texture/grey-wash-wall', png, 350px, 259px);
     background-repeat: repeat;
   }
+
+  .title{ margin-top: 1em;}
 }

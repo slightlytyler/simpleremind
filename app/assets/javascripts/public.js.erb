@@ -27,10 +27,10 @@ $(function(){
   //////
 
   // Init float labels
-  $('input.floatlabel').floatlabel({
+  $('.floatlabel').floatlabel({
       slideInput: true,
-      labelStartTop: '-2.5em',
-      labelEndTop: '-2.5em',
+      labelStartTop: '.2em',
+      labelEndTop: '.2em',
       transitionDuration: '0.3s'
   });
   // Init slab text
@@ -40,10 +40,10 @@ $(function(){
   $('#app-nav').tabBar(headerHeight);
 
   // Index splash sizing
-  $('.full-page').height(windowHeight - headerHeight - appNavHeight);
+  $('.splash.full-page').css('min-height', windowHeight - headerHeight - appNavHeight); 
 
   $(window).resize(function() {
-    $('.splash.full-page').height(windowHeight - headerHeight - appNavHeight); 
+    $('.splash.full-page').css('min-height', windowHeight - headerHeight - appNavHeight); 
   });
 
   // Size specific functions

@@ -11,25 +11,25 @@
 
         <section class="col-md-5 col-md-offset-1 col-sm-6">
           <h2 class="white hard-shadow"><%= fa_icon "user" %> sign up</span></h2>
-          <input class="floatlabel bg-blue-light-a" type="text" placeholder="Full Name" />
+          <input class="floatlabel styled bg-blue-light-a" type="text" placeholder="Full Name" />
 
-          <input class="floatlabel bg-blue-light-a" type="text" placeholder="Company" />
+          <input class="floatlabel styled bg-blue-light-a" type="text" placeholder="Company" />
 
-          <%= f.email_field :email, autofocus: true, placeholder: :email, class: 'floatlabel bg-blue-light-a' %>
+          <%= f.email_field :email, autofocus: true, placeholder: :email, class: 'floatlabel styled bg-blue-light-a' %>
 
-          <%= f.password_field :password, autocomplete: "off", placeholder: :password, class: 'floatlabel bg-blue-light-a' %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: :password, class: 'floatlabel styled bg-blue-light-a' %>
 
-          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password again...", class: 'floatlabel bg-blue-light-a' %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password again...", class: 'floatlabel styled bg-blue-light-a' %>
         </section>
 
         <section class="col-md-5 col-sm-6">
           <h2 class="white hard-shadow"><%= fa_icon "credit-card" %> billing info</h2>
 
-          <input class="floatlabel bg-blue-light-a" type="text" placeholder="Name on Card" />
+          <input class="floatlabel styled bg-blue-light-a" type="text" placeholder="Name on Card" />
 
-          <input class="floatlabel bg-blue-light-a" type="text" placeholder="CC #" />
+          <input class="floatlabel styled bg-blue-light-a" type="text" placeholder="CC #" />
 
-          <input class="short floatlabel bg-blue-light-a margin-right" data-label="MM/YY" type="text" placeholder="Expiration Date" /><input class="short floatlabel bg-blue-light-a margin-left" data-class="margin-left" type="text" placeholder="Sec Code" />
+          <input class="floatlabel styled bg-blue-light-a margin-right" data-label="MM/YY" data-wrapper="inline" type="text" placeholder="Expiration Date" /><input class="floatlabel styled bg-blue-light-a margin-left" data-wrapper="inline float-right" type="text" placeholder="Sec Code" />
 
           <%= f.submit "SIGN UP", class: "btn btn-default btn-lg" %>
           <%= render "devise/shared/links" %>

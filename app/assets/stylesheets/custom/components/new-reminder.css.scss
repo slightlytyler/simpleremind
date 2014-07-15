@@ -1,0 +1,10 @@
+form.new-reminder{
+  max-width: 400px;
+
+  input[type=text], textarea{
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  textarea{ height: 9em;}
+}

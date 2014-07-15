@@ -17,6 +17,7 @@
                 transitionDuration              : 0.1,
                 transitionEasing                : 'ease-in-out',
                 labelClass                      : '',
+                backgroundColor                 : 'transparent',
                 typeMatches                     : /text|password|email|number|search|url/
             };
         function Plugin ( element, options ) {
@@ -38,8 +39,11 @@
                     '-ms-transition'                : 'all ' + transDuration + 's ' + transEasing,
                     'transition'                    : 'all ' + transDuration + 's ' + transEasing
                 };
-                if( thisElement.prop('tagName').toUpperCase() !== 'INPUT' ) { return; }
-                if( !settings.typeMatches.test( thisElement.attr('type') ) ) { return; }
+                if( thisElement.prop('tagName').toUpperCase() !== 'INPUT' && 
+                    thisElement.prop('tagName').toUpperCase() !== 'TEXTAREA' && 
+                    thisElement.prop('tagName').toUpperCase() !== 'SELECT') { return; }
+                if( thisElement.prop('tagName').toUpperCase() == 'INPUT' && 
+                    !settings.typeMatches.test( thisElement.attr('type') ) ) { return; }
                 var elementID = thisElement.attr('id');
                 if( !elementID ) {
                     elementID = Math.floor( Math.random() * 100 ) + 1;
@@ -48,34 +52,56 @@
                 var placeholderText     = thisElement.attr('placeholder');
                 var floatingText        = thisElement.data('label');
                 var extraClasses        = thisElement.data('class');
+                var wrapperClasses        = thisElement.data('wrapper');
                 if( !extraClasses ) { extraClasses = ''; }
                 if( !placeholderText || placeholderText === '' ) { placeholderText = "You forgot to add placeholder attribute!"; }
                 if( !floatingText || floatingText === '' ) { floatingText = placeholderText; }
                 this.inputPaddingTop    = parseFloat( thisElement.css('padding-top') ) + parseFloat(settings.paddingOffset);
-                thisElement.wrap('<div class="floatlabel-wrapper" style="position:relative"></div>');
+                thisElement.wrap('<div class="floatlabel-wrapper ' + wrapperClasses + '" ' + 'style="position:relative"></div>');
                 thisElement.before('<label for="' + elementID + '" class="label-floatlabel ' + settings.labelClass + ' ' + extraClasses + '">' + floatingText + '</label>');
                 this.$label = thisElement.prev('label');
-                this.$label.css({
-                    'position'                      : 'absolute',
-                    'top'                           : settings.labelStartTop,
-                    'left'                          : '8px', //thisElement.css('padding-left'),
-                    'display'                       : 'none',
-                    '-moz-opacity'                  : '0',
-                    '-khtml-opacity'                : '0',
-                    '-webkit-opacity'               : '0',
-                    'opacity'                       : '0',
-                    'font-size'                     : '11px',
-                    'font-weight'                   : 'bold',
-                    'color'                         : '#838780'
-                });
+                //this.$label.css({ 'top' : settings.labelStartTop });
+                if (thisElement.prop('tagName').toUpperCase() == 'SELECT') { 
+                    this.$label.css({ 
+                        'position'                      : 'absolute',
+                        'top'                           : settings.labelStartTop,
+                        'left'                          : '8px', //thisElement.css('padding-left'),
+                        'font-size'                     : '11px',
+                        'font-weight'                   : 'bold',
+                        'background-color'              : settings.backgroundColor,
+                        'padding-left'                  : '5px',
+                        'padding-right'                 : '5px',
+                        'display'                       : 'block',
+                        '-moz-opacity'                  : '1',
+                        '-khtml-opacity'                : '1',
+                        '-webkit-opacity'               : '1',
+                        'opacity'                       : '1'
+                    });                
+                } else {
+                    this.$label.css({
+                        'position'                      : 'absolute',
+                        'top'                           : settings.labelStartTop,
+                        'left'                          : '8px', //thisElement.css('padding-left'),
+                        'font-size'                     : '11px',
+                        'font-weight'                   : 'bold',
+                        'background-color'              : settings.backgroundColor,
+                        'padding-left'                  : '5px',
+                        'padding-right'                 : '5px',
+                        'display'                       : 'none',
+                        '-moz-opacity'                  : '0',
+                        '-khtml-opacity'                : '0',
+                        '-webkit-opacity'               : '0',
+                        'opacity'                       : '0',
+                    });
+                }
                 if( !settings.slideInput ) {                    
                     thisElement.css({ 'padding-top' : this.inputPaddingTop });
                 }
                 thisElement.on('keyup blur change', function( e ) {
                     self.checkValue( e );
                 });
-                thisElement.on('blur', function() { thisElement.prev('label').css({ 'color' : '#424242' }); });
-                thisElement.on('focus', function() { thisElement.prev('label').css({ 'color' : 'black' }); });
+                thisElement.on('blur', function() { thisElement.prev('label').toggleClass('focus'); });
+                thisElement.on('focus', function() { thisElement.prev('label').toggleClass('focus'); });
                 window.setTimeout( function() {
                     self.$label.css( animationCss );
                     self.$element.css( animationCss );
@@ -94,8 +120,10 @@
                 if( thisElement.data('flout') === '1' && currentFlout !== '1' ) {
                     this.showLabel();
                 }
-                if( thisElement.data('flout') === '0' && currentFlout !== '0' ) {
-                    this.hideLabel();
+                if (thisElement.prop('tagName').toUpperCase() !== 'SELECT') { 
+                    if( thisElement.data('flout') === '0' && currentFlout !== '0' ) {
+                        this.hideLabel();
+                    }
                 }
             },
             showLabel: function() {
@@ -103,14 +131,18 @@
                 self.$label.css({ 'display' : 'block' });
                 window.setTimeout(function() {
                     self.$label.css({
-                        'top'                           : self.settings.labelEndTop,
+                        'top'                           : self.settings.labelStartTop,
                         '-moz-opacity'                  : '1',
                         '-khtml-opacity'                : '1',
                         '-webkit-opacity'               : '1',
                         'opacity'                       : '1'
                     });
                     if( self.settings.slideInput ) {
-                        self.$element.css({ 'padding-top' : self.inputPaddingTop });
+                        if (self.$element.prop('tagName').toUpperCase() !== 'SELECT') { 
+                            self.$element.css({ 'padding-top' : self.inputPaddingTop });
+                        } else {
+                            self.$element.css({ 'padding-top' : self.inputPaddingTop - parseFloat(self.settings.labelStartTop) - 6 });
+                        }
                     }
                     self.$element.addClass('active-floatlabel');
                 }, 50);
