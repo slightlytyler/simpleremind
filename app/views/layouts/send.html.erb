@@ -7,7 +7,7 @@
       <h4 class="white hard-shadow left-text">Reminder:</h4>
       <textarea class="floatlabel styled bg-blue-light-a" placeholder="Your message..." data-label="Max char. 140"></textarea>
       <input class="col-md-6 col-sm-6 col-xs-6 btn btn-hollow" name="Send Now" value="Send Now" type="submit" />
-      <a class="col-md-6 col-sm-6 col-xs-6 btn btn-default" name="Send Later" >Send Later</a>
+      <%= link_to_modal "Send Later", '/send-later', name: 'Send Letter', class: 'col-md-6 col-sm-6 col-xs-6 btn btn-default' %>
     </form>
 
     <a id="reminder-sidebar-toggle" href="#sidr"><%= fa_icon "chevron-left" %></a>
