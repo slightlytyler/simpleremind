@@ -29,19 +29,21 @@
     color: $gray-light;
   }
 
-  ul{ margin-top: .5em; }
+  ul.reminder-list{ 
+    margin-top: .5em; 
 
-  li{ 
-    @extend .clearfix;
-    margin-bottom: .4em; 
-    padding: .2em 0;
-    border-bottom: 1px dashed rgba(255,255,255,.35);
+    li{ 
+      @extend .clearfix;
+      margin-bottom: .4em; 
+      padding: .2em 0;
+      border-bottom: 1px dashed rgba(255,255,255,.35);
 
-    &.delivered span{ 
-      color: $gray-dark; 
-      text-decoration: line-through;
+      &.delivered span{ 
+        color: $gray-dark; 
+        text-decoration: line-through;
+      }
+      &.failed span{ color: salmon; }
     }
-    &.failed span{ color: salmon; }
   }
 
   span{ 
