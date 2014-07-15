@@ -53,7 +53,11 @@ function pageLoad(){
   // Init reminder side bar
   $('#reminder-sidebar-toggle').sidr({
     side: 'right',
-    body: '#send-page .outer-container'
+    body: '#send-page .outer-container',
+    onOpen: function() {
+      // Reminder side bar list tiny scrollbar init
+      //$('.reminder-sidebar ul.reminder-list').tinyscrollbar();
+    }
   });
 
   // Reminder side bar sizing
@@ -62,12 +66,12 @@ function pageLoad(){
   var reminderSidebarColumnHeadersHeight = $('.reminder-sidebar .column-headers').actualOuterHeight(true);
   var reminderEditNavHeight = $('#reminder-edit-nav').actualHeight();
 
-   $(window).resize(function() {
+  $(window).resize(function() {
     reminderSidebarHeight = $('.reminder-sidebar').height();
     reminderSidebarTitleHeight = $('.reminder-sidebar .inner .title').actualOuterHeight(true);
     reminderSidebarColumnHeadersHeight = $('.reminder-sidebar .column-headers').actualOuterHeight(true);
     reminderEditNavHeight = $('#reminder-edit-nav').actualHeight();
-   });
+  });
 
   $('.reminder-sidebar ul.reminder-list').css('height', reminderSidebarHeight - reminderSidebarTitleHeight - reminderSidebarColumnHeadersHeight - reminderEditNavHeight);
 
@@ -92,5 +96,13 @@ $(function(){
   // On modal open
   $('body').on($.modal.OPEN, function(event, modal) {
     pageLoad();
+    $('body').addClass('stop-scrolling');
+    $('body').bind('touchmove', function(e){e.preventDefault()});
+  });
+
+  // On modal close
+  $('body').on($.modal.CLOSE, function(event, modal) {
+    $('body').removeClass('stop-scrolling');
+    $('body').unbind('touchmove');
   });
 });

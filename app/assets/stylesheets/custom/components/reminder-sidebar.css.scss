@@ -34,12 +34,13 @@
   }
 
   ul.reminder-list{ 
-    overflow: scroll; 
+    overflow: auto; 
+    margin-bottom: 0;
+    width: 100%;
 
     li{ 
       @extend .clearfix;
-      margin-bottom: .4em; 
-      padding: .2em 0;
+      padding: .4em 0;
       border-bottom: 1px dashed rgba(255,255,255,.35);
 
       &.delivered span{ 

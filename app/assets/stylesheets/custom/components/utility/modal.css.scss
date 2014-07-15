@@ -11,6 +11,7 @@
   right: initial;
   overflow: visible;
   animation: smooth-entry 1s;
+  z-index: 3 !important;
 
   a.close-modal {
     visibility: hidden;
@@ -31,6 +32,10 @@
   }
 }
 
+.jquery-modal.blocker{
+  z-index: 2 !important;
+}
+
 .modal-spinner {
   display: none;
   width: 64px;
@@ -43,4 +48,9 @@
   background: image-url('spinner.gif') #111 no-repeat center center;
   border-radius: 8px;
   z-index: 9999;
+}
+
+body.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
