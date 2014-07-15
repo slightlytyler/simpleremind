@@ -101,8 +101,8 @@
 
         // Prepare page if container is body
         if($body.is('body')){
-          scrollTop = $html.scrollTop();
-          $html.css('overflow-x', 'hidden').scrollTop(scrollTop);
+          //scrollTop = $html.scrollTop();
+          //$html.css('overflow-x', 'hidden').scrollTop(scrollTop);
         }
 
         // Open menu
@@ -154,8 +154,8 @@
 
         // Close menu
         if($body.is('body')){
-          scrollTop = $html.scrollTop();
-          $html.removeAttr('style').scrollTop(scrollTop);
+          //scrollTop = $html.scrollTop();
+          //$html.removeAttr('style').scrollTop(scrollTop);
         }
         $body.addClass('sidr-animating').animate(bodyAnimation, speed).removeClass(bodyClass);
         $menu.animate(menuAnimation, speed, function() {
