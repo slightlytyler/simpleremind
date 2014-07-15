@@ -1,0 +1,10 @@
+.send-later{
+  .title{ margin-bottom: 1em; }
+  .input-wrapper{ 
+    @include make-md-column(4); 
+
+    &.float-right{ float: right; }
+  }
+
+  input[type=submit]{ margin-top: 1em; }
+}

@@ -1,5 +1,5 @@
 // Init jquery picture, float labels, fit text
-$(function(){
+function pageLoad(){
   // Variables
   if(!(/iPhone|iPod/i).test(navigator.userAgent || navigator.vendor || window.opera)){
     var windowHeight = $(window).height();
@@ -33,6 +33,7 @@ $(function(){
       labelEndTop: '.2em',
       transitionDuration: '0.3s'
   });
+
   // Init slab text
   $('.slab').slabText();
 
@@ -65,4 +66,14 @@ $(function(){
     // Init smooth hash scrolling
     smoothHashNav(appNavHeight);
   }
+};
+
+$(function(){
+  // On document ready
+  pageLoad();
+
+  // On modal open
+  $('body').on($.modal.OPEN, function(event, modal) {
+    pageLoad();
+  });
 });

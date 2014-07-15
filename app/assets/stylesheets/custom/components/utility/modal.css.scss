@@ -13,19 +13,20 @@
   animation: smooth-entry 1s;
 
   a.close-modal {
-    position: absolute;
-    top: -16.5px;
-    right: -.5px;
-    display: block;
-    width: 30px;
-    height: 30px;
-    text-indent: -9999px;
-    background: image-url('close.png') no-repeat 0 0;
-    background-size: cover;
-    background-color: $blue-x-light;
-    border-radius: 50%;
+    visibility: hidden;
 
-    &:hover{ background-color: $blue-light;}
+    &::before{
+      visibility: visible;
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: "\f00d";
+      font-family: FontAwesome;
+      font-size: 3rem;
+      @extend .white;
+
+      &:hover{ color: $blue-s-light}
+    }
   }
 }
 
