@@ -1,0 +1,10 @@
+ul.underline-list{
+  list-style: none;
+
+  li{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    border-bottom: 3px dashed white;
+  }
+}
