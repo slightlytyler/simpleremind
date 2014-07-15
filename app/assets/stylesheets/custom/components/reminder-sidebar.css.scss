@@ -18,6 +18,10 @@
   position: absolute;
   padding-top: 3em;
 
+  .inner{
+    padding-left: 2em;
+  }
+
   .column-headers{ margin-top: 1.6em; }
 
   .label{ 
@@ -30,7 +34,7 @@
   }
 
   ul.reminder-list{ 
-    margin-top: .5em; 
+    overflow: scroll; 
 
     li{ 
       @extend .clearfix;
@@ -61,5 +65,23 @@
 
   .recipient{
     width: 60%;
+  }
+}
+
+#reminder-edit-nav{
+  li{
+    position: relative;
+  }
+
+  i{
+   font-size: 3rem;
+   @extend .dodge;
+   display: inline-block;
+   height: auto;
+   line-height: 50px;
+
+   &:hover{
+    @extend .white;
+   }
   }
 }

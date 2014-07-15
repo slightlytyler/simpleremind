@@ -20,6 +20,7 @@
 //= require lib/utility/slab-text
 //= require lib/utility/retina
 //= require lib/utility/smooth-hash-nav
+//= require lib/utility/actual-height
 //= require lib/components/tab-bar
 //= require lib/components/sidr
 //= require jquery.ui.all
