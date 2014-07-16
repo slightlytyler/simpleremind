@@ -1,6 +1,11 @@
 .btn{ 
   border-radius: 1px; 
   font-weight: bold;
+
+  &.fat{
+    padding-left: 3em;
+    padding-right: 3em;
+  }
 }
 .btn-primary{ 
   background-color: $blue-main; 

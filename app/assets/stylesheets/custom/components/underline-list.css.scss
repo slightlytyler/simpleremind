@@ -4,7 +4,28 @@ ul.underline-list{
   li{
     font-size: 2rem;
     font-weight: bold;
-    text-align: right;
-    border-bottom: 3px dashed white;
+    text-align: left;
+    padding: .8em 0 .2em;
+    padding-left: .4em;
+    border-bottom: 3px solid white;
+
+    &:last-child{ margin-bottom: 0; }
+
+    &:hover{
+      background-color: white;
+
+      a{
+        color: $blue-main;
+      }
+    }
+
+    &.active{
+      background-color: $blue-main;
+      border-color: $blue-main;
+
+      a{
+        color: white;
+      }
+    }
   }
 }
