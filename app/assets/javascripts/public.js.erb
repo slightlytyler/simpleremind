@@ -76,11 +76,8 @@ function pageLoad(){
   $('.reminder-sidebar ul.reminder-list').css('height', reminderSidebarHeight - reminderSidebarTitleHeight - reminderSidebarColumnHeadersHeight - reminderEditNavHeight);
 
   // My account tabs 
-  $('.underline-list a').click(function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-  });
   $('.underline-list a[href="#user-info"]').tab('show');
+  $('.underline-list a[href="#upcoming"]').tab('show');
 
   // Size specific functions
   //
