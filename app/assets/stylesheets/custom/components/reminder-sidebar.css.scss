@@ -22,33 +22,17 @@
     padding-left: 2em;
   }
 
-  .column-headers{ margin-top: 1.6em; }
+  .reminder-list-headers{ 
+    margin-top: 1.6em;
 
-  .label{ 
-    display: inline-block;
-    text-align: left;
-    border-bottom: 2px solid white;
-    padding: 0;
-    padding-right: 1em;
-    color: $gray-light;
-  }
-
-  ul.reminder-list{ 
-    overflow: auto; 
-    margin-bottom: 0;
-    width: 100%;
-
-    li{ 
-      @extend .clearfix;
-      padding: .4em 0;
-      border-bottom: 1px dashed rgba(255,255,255,.35);
-
-      &.delivered span{ 
-        color: $gray-dark; 
-        text-decoration: line-through;
-      }
-      &.failed span{ color: salmon; }
-    }
+    .label{ 
+      display: inline-block;
+      text-align: left;
+      border-bottom: 2px solid white;
+      padding: 0;
+      padding-right: 1em;
+      color: white;
+    } 
   }
 
   span{ 

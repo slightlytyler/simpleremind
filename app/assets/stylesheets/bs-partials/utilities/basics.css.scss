@@ -8,7 +8,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
 
-    &.short{ max-width: $screen-md-max }
+    &.short{ max-width: $screen-sm-max }
 }
 
 .inline-list li{ display: inline-block; }

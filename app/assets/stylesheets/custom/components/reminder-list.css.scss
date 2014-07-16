@@ -1,0 +1,19 @@
+ul.reminder-list{ 
+  overflow: auto; 
+  margin-bottom: 0;
+  width: 100%;
+  list-style: none;
+
+  li{ 
+    max-width: 30em;
+    @extend .clearfix;
+    padding: .4em 0;
+    border-bottom: 1px dashed rgba(255,255,255,.35);
+
+    &.delivered span{ 
+      color: $gray-dark; 
+      text-decoration: line-through;
+    }
+    &.failed span{ color: salmon; }
+  }
+}
