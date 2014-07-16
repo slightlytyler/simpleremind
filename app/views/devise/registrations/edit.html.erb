@@ -6,7 +6,14 @@
 
 <div id="my-account" class="app-page splash full-page-app">
   <div class="outer-container short clearfix">
-    <section class="form-details col-md-9 tab-content">
+   <section class="filters col-md-3 col-md-push-9">
+      <ul class="underline-list clearfix" role="tablist">
+        <li class="col-xs-4 col-md-12"><a class="white hard-shadow" href="#user-info" role="tab" data-toggle="tab">My Account</a></li>
+        <li class="col-xs-4 col-md-12"><a class="white hard-shadow" href="#billing-info" role="tab" data-toggle="tab">Billing Info</a></li>
+        <li class="col-xs-4 col-md-12"><a class="white hard-shadow" href="#close-account" role="tab" data-toggle="tab">Close Account</a></li>
+      </ul>
+    </section>
+    <section class="form-details col-md-9 col-md-pull-3 tab-content">
 
       <section class="tab-pane fade in" id="user-info">
         <%= render :partial=>"devise/registrations/user_info" %>
@@ -20,13 +27,6 @@
         <%= render :partial=>"devise/registrations/cancel_account" %>
       </section>
       
-    </section>
-    <section class="filters col-md-3">
-      <ul class="underline-list" role="tablist">
-        <li><a class="white hard-shadow" href="#user-info" role="tab" data-toggle="tab">My Account</a></li>
-        <li><a class="white hard-shadow" href="#billing-info" role="tab" data-toggle="tab">Billing Info</a></li>
-        <li><a class="white hard-shadow" href="#close-account" role="tab" data-toggle="tab">Close Account</a></li>
-      </ul>
     </section>
   </div>
 </div>

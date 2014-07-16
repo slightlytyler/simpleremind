@@ -1,18 +1,26 @@
 <div id="reminders-page" class="app-page splash full-page-app">
   <div class="outer-container short">
-    <section class="reminders col-md-9 tab-content">
+    <section class="filters col-md-3 col-md-push-9">
+      <ul class="underline-list clearfix" role="tablist">
+        <li class="col-xs-4 col-md-12"><a class="white hard-shadow" href="#upcoming" role="tab" data-toggle="tab">Upcoming</a></li>
+        <li class="col-xs-4 col-md-12"><a class="white hard-shadow" href="#failed" role="tab" data-toggle="tab">Failed</a></li>
+        <li class="col-xs-4 col-md-12"><a class="white hard-shadow" href="#past" role="tab" data-toggle="tab">Past</a></li>
+      </ul>
+    </section>
+
+    <section class="reminders col-md-9 col-md-pull-3 tab-content">
 
       <h2 class="white hard-shadow">My Reminders</h2>
 
       <section class="tab-pane" id="upcoming">
-        <h4 class="blue-main hard-shadow">Upcoming</h4>
+        <h4 class="blue-main hard-shadow">Upcoming Sends</h4>
 
         <section class="clearfix reminder-list-headers">
           <section class="date">
-            <h5 class="label">Date</h5>
+            <h5 class="reminder-column-label">Date</h5>
           </section>
           <section class="recipient">
-            <h5 class="label">Recipient</h5>
+            <h5 class="reminder-column-label">Recipient</h5>
           </section>
         </section>
 
@@ -66,14 +74,14 @@
       </section>
 
       <section class="tab-pane" id="failed">
-        <h4 class="blue-main hard-shadow">Failed</h4>
+        <h4 class="blue-main hard-shadow">Failed Sends</h4>
 
         <section class="clearfix reminder-list-headers">
           <section class="date">
-            <h5 class="label">Date</h5>
+            <h5 class="reminder-column-label">Date</h5>
           </section>
           <section class="recipient">
-            <h5 class="label">Recipient</h5>
+            <h5 class="reminder-column-label">Recipient</h5>
           </section>
         </section>
 
@@ -127,14 +135,14 @@
       </section>
 
       <section class="tab-pane" id="past">
-        <h4 class="blue-main hard-shadow">Past</h4>
+        <h4 class="blue-main hard-shadow">Past Sends</h4>
 
         <section class="clearfix reminder-list-headers">
           <section class="date">
-            <h5 class="label">Date</h5>
+            <h5 class="reminder-column-label">Date</h5>
           </section>
           <section class="recipient">
-            <h5 class="label">Recipient</h5>
+            <h5 class="reminder-column-label">Recipient</h5>
           </section>
         </section>
 
@@ -187,14 +195,6 @@
         </ul>
       </section>
 
-    </section>
-
-    <section class="filters col-md-3">
-      <ul class="underline-list" role="tablist">
-        <li><a class="white hard-shadow" href="#upcoming" role="tab" data-toggle="tab">Upcoming</a></li>
-        <li><a class="white hard-shadow" href="#failed" role="tab" data-toggle="tab">Failed</a></li>
-        <li><a class="white hard-shadow" href="#past" role="tab" data-toggle="tab">Past</a></li>
-      </ul>
     </section>
   </div>
 </div>

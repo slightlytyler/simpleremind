@@ -1,27 +1,31 @@
 ul.underline-list{
   list-style: none;
+  padding-left: 0;
+   margin-bottom: 2em;
 
   li{
     font-size: 2rem;
     font-weight: bold;
     text-align: left;
-    border-bottom: 3px solid white;
+    padding: 0 .2em;
+
+    @media (min-width: $screen-md-min){
+      padding: 0;
+    }
 
     &:last-child{ margin-bottom: 0; }
 
     &:hover{
-      background-color: white;
-
       a{
+         background-color: white;
         color: $blue-main;
       }
     }
 
     &.active{
-      background-color: $blue-main;
-      border-color: $blue-main;
-
       a{
+        background-color: $blue-main;
+        border-color: $blue-main;
         color: white;
       }
     }
@@ -32,5 +36,20 @@ ul.underline-list{
     height: 100%;
     padding: .8em 0 .2em;
     padding-left: .4em;
+    border-bottom: 3px solid white;
+
   }
+}
+
+.reminder-list-headers{ 
+  margin-top: 1.6em;
+
+  .reminder-column-label{ 
+    display: inline-block;
+    text-align: left;
+    border-bottom: 2px solid white;
+    padding: 0;
+    padding-right: 1em;
+    color: white;
+  } 
 }
