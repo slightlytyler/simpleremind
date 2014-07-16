@@ -18,17 +18,4 @@ input.styled, textarea.styled{
   font-size: 2rem;
   padding: 1.4rem 1.2rem;
   border-radius: 2px;
-
-  &.short{ 
-    width: 46%;
-
-    &.margin-right{
-      margin-right: 4%;
-    }
-    
-    &.margin-left{
-      margin-left: 4%;
-      vertical-align: top;
-    }
-  }
 }

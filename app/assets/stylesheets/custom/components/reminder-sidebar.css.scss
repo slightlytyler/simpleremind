@@ -22,14 +22,6 @@
     padding-left: 2em;
   }
 
-  span{ 
-    display: block; 
-    color: $blue-light;
-    @extend .hard-shadow;
-  }
-
-  .date, .recipient{ float: left; }
-
   .date{
     width: 40%;
     vertical-align: top;

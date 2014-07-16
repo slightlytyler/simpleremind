@@ -6,7 +6,6 @@ ul.reminder-list{
   padding-left: 0;
 
   li{ 
-    max-width: 30em;
     @extend .clearfix;
     padding: .4em 0;
     border-bottom: 1px dashed rgba(255,255,255,.35);
@@ -15,6 +14,36 @@ ul.reminder-list{
       color: $gray-dark; 
       text-decoration: line-through;
     }
-    &.failed span{ color: salmon; }
+    &.failed span{ color: $red-fail; }
   }
+
+  span{
+    font-size: 1.8rem;
+    display: block; 
+    @extend .hard-shadow;
+    color: $blue-light;
+  }
+
+  .edit i{
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+
+.reminder-list-headers{ 
+  margin-top: 1.6em;
+
+  .reminder-column-label{ 
+    display: inline-block;
+    text-align: left;
+    border-bottom: 2px solid white;
+    padding: 0;
+    padding-right: 1em;
+    color: white;
+  } 
+}
+
+ul.reminder-list, .reminder-list-headers{
+  max-width: 30em;
+  .date, .recipient, .edit{ float: left; }
 }

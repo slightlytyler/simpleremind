@@ -4,7 +4,7 @@
       <ul class="underline-list clearfix" role="tablist">
         <li class="col-xs-4 col-md-12"><a class="white hard-shadow" href="#upcoming" role="tab" data-toggle="tab">Upcoming</a></li>
         <li class="col-xs-4 col-md-12"><a class="white hard-shadow" href="#failed" role="tab" data-toggle="tab">Failed</a></li>
-        <li class="col-xs-4 col-md-12"><a class="white hard-shadow" href="#past" role="tab" data-toggle="tab">Past</a></li>
+        <li class="col-xs-4 col-md-12"><a class="white hard-shadow" href="#completed" role="tab" data-toggle="tab">Completed</a></li>
       </ul>
     </section>
 
@@ -13,7 +13,9 @@
       <h2 class="white hard-shadow">My Reminders</h2>
 
       <section class="tab-pane" id="upcoming">
-        <h4 class="blue-main hard-shadow">Upcoming Sends</h4>
+        <section class="space-bottom">
+          <h4 class="blue-main hard-shadow">Upcoming Sends</h4>
+        </section>
 
         <section class="clearfix reminder-list-headers">
           <section class="date">
@@ -22,10 +24,13 @@
           <section class="recipient">
             <h5 class="reminder-column-label">Recipient</h5>
           </section>
+          <section class="edit">
+            <h5 class="reminder-column-label">Edit</h5>
+          </section>
         </section>
 
-        <ul class="reminder-list">
-          <li><a>
+        <ul class="reminder-list bg-burn">
+          <li>
             <section class="date">
               <span>7/6/14</span>
             </section>
@@ -33,8 +38,12 @@
               <span>Sarah Lee</span>
               <span>(972) 772 5142</span>
             </section>
-          </a></li>
-          <li><a>
+            <section class="edit clearfix">
+              <%=fa_icon "pencil", class: 'col-xs-4' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li>
             <section class="date">
               <span>7/4/14</span>
             </section>
@@ -42,8 +51,12 @@
               <span>John Doe</span>
               <span>(214) 901 6983</span>
             </section>
-          </a></li>
-          <li><a>
+            <section class="edit">
+              <%=fa_icon "pencil", class: 'col-xs-4' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li>
             <section class="date">
               <span>7/3/14</span>
             </section>
@@ -51,8 +64,12 @@
               <span>Greg Andrews</span>
               <span>(489) 430 0071</span>
             </section>
-          </a></li>
-          <li><a>
+            <section class="edit">
+              <%=fa_icon "pencil", class: 'col-xs-4' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li>
             <section class="date">
               <span>7/3/14</span>
             </section>
@@ -60,8 +77,12 @@
               <span>Lynn Flint</span>
               <span>(972) 978 3111</span>
             </section>
-          </a></li>
-          <li><a>
+            <section class="edit">
+              <%=fa_icon "pencil", class: 'col-xs-4' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li>
             <section class="date">
               <span>7/6/14</span>
             </section>
@@ -69,12 +90,18 @@
               <span>Sarah Lee</span>
               <span>(972) 772 5142</span>
             </section>
-          </a></li>
+            <section class="edit">
+              <%=fa_icon "pencil", class: 'col-xs-4' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            </section>
+          </li>
         </ul>
       </section>
 
       <section class="tab-pane" id="failed">
-        <h4 class="blue-main hard-shadow">Failed Sends</h4>
+        <section class="space-bottom">
+          <h4 class="blue-main hard-shadow">Failed Sends</h4>
+        </section>
 
         <section class="clearfix reminder-list-headers">
           <section class="date">
@@ -83,10 +110,13 @@
           <section class="recipient">
             <h5 class="reminder-column-label">Recipient</h5>
           </section>
+          <section class="edit">
+            <h5 class="reminder-column-label">Edit</h5>
+          </section>
         </section>
 
-        <ul class="reminder-list">
-          <li><a>
+        <ul class="reminder-list bg-burn">
+          <li class="failed">
             <section class="date">
               <span>7/6/14</span>
             </section>
@@ -94,8 +124,13 @@
               <span>Sarah Lee</span>
               <span>(972) 772 5142</span>
             </section>
-          </a></li>
-          <li><a>
+            <section class="edit">
+              <%=fa_icon "pencil", class: 'col-xs-4' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+              <%=fa_icon "mail-reply", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li class="failed">
             <section class="date">
               <span>7/4/14</span>
             </section>
@@ -103,8 +138,13 @@
               <span>John Doe</span>
               <span>(214) 901 6983</span>
             </section>
-          </a></li>
-          <li><a>
+            <section class="edit">
+              <%=fa_icon "pencil", class: 'col-xs-4' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+              <%=fa_icon "mail-reply", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li class="failed">
             <section class="date">
               <span>7/3/14</span>
             </section>
@@ -112,8 +152,13 @@
               <span>Greg Andrews</span>
               <span>(489) 430 0071</span>
             </section>
-          </a></li>
-          <li><a>
+            <section class="edit">
+              <%=fa_icon "pencil", class: 'col-xs-4' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+              <%=fa_icon "mail-reply", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li class="failed">
             <section class="date">
               <span>7/3/14</span>
             </section>
@@ -121,8 +166,13 @@
               <span>Lynn Flint</span>
               <span>(972) 978 3111</span>
             </section>
-          </a></li>
-          <li><a>
+            <section class="edit">
+              <%=fa_icon "pencil", class: 'col-xs-4' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+              <%=fa_icon "mail-reply", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li class="failed">
             <section class="date">
               <span>7/6/14</span>
             </section>
@@ -130,12 +180,19 @@
               <span>Sarah Lee</span>
               <span>(972) 772 5142</span>
             </section>
-          </a></li>
+            <section class="edit">
+              <%=fa_icon "pencil", class: 'col-xs-4' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+              <%=fa_icon "mail-reply", class: 'col-xs-4' %>
+            </section>
+          </li>
         </ul>
       </section>
 
-      <section class="tab-pane" id="past">
-        <h4 class="blue-main hard-shadow">Past Sends</h4>
+      <section class="tab-pane" id="completed">
+        <section class="space-bottom">
+          <h4 class="blue-main hard-shadow">Completed Sends</h4>
+        </section>
 
         <section class="clearfix reminder-list-headers">
           <section class="date">
@@ -144,10 +201,13 @@
           <section class="recipient">
             <h5 class="reminder-column-label">Recipient</h5>
           </section>
+          <section class="edit">
+            <h5 class="reminder-column-label">Edit</h5>
+          </section>
         </section>
 
-        <ul class="reminder-list">
-          <li><a>
+        <ul class="reminder-list bg-burn">
+          <li class="delivered">
             <section class="date">
               <span>7/6/14</span>
             </section>
@@ -155,8 +215,11 @@
               <span>Sarah Lee</span>
               <span>(972) 772 5142</span>
             </section>
-          </a></li>
-          <li><a>
+            <section class="edit">
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li class="delivered">
             <section class="date">
               <span>7/4/14</span>
             </section>
@@ -164,8 +227,11 @@
               <span>John Doe</span>
               <span>(214) 901 6983</span>
             </section>
-          </a></li>
-          <li><a>
+             <section class="edit">
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li class="delivered">
             <section class="date">
               <span>7/3/14</span>
             </section>
@@ -173,8 +239,11 @@
               <span>Greg Andrews</span>
               <span>(489) 430 0071</span>
             </section>
-          </a></li>
-          <li><a>
+             <section class="edit">
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li class="delivered">
             <section class="date">
               <span>7/3/14</span>
             </section>
@@ -182,8 +251,11 @@
               <span>Lynn Flint</span>
               <span>(972) 978 3111</span>
             </section>
-          </a></li>
-          <li><a>
+             <section class="edit">
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            </section>
+          </li>
+          <li class="delivered">
             <section class="date">
               <span>7/6/14</span>
             </section>
@@ -191,7 +263,10 @@
               <span>Sarah Lee</span>
               <span>(972) 772 5142</span>
             </section>
-          </a></li>
+             <section class="edit">
+              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            </section>
+          </li>
         </ul>
       </section>
 

@@ -18,12 +18,27 @@
 <% if user_signed_in? %>
   <nav id="app-nav" class="navbar navbar-inverse tab-bar natural-shadow-box" role="navigation">
     <div class="container-fluid">
-      <ul class="nav navbar-nav float-none-cascade center-text">
-        <%= nav_link((fa_icon "calendar"), "/calendar") %>
-        <%= nav_link (fa_icon "group"), "/contacts" %>
-        <%= nav_link (fa_icon "send"), "/send" %>
-        <%= nav_link (fa_icon "book"), "/reminders" %>
-        <%= nav_link (fa_icon "user"), edit_user_registration_path %>
+      <ul class="nav navbar-nav float-none-cascade center-text">   
+        <%= nav_link("/calendar") do %>
+          <%= fa_icon "calendar" %>
+          <span>Calendar</span>
+        <% end %>
+        <%= nav_link("/contacts") do %>
+          <%= fa_icon "group" %>
+          <span>My Contacts</span>
+        <% end %>
+        <%= nav_link("/send") do %>
+          <%= fa_icon "send" %>
+          <span>Send Reminder</span>
+        <% end %>
+        <%= nav_link("/reminders") do %>
+          <%= fa_icon "book" %>
+          <span>My Reminders</span>
+        <% end %>
+        <%= nav_link(edit_user_registration_path) do %>
+          <%= fa_icon "user" %>
+          <span>My Account</span>
+        <% end %>
       </ul>
     </div><!-- /.container-fluid -->
   </nav>

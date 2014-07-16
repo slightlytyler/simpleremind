@@ -13,8 +13,17 @@
     font-size: 3rem; 
     height: auto;
     margin-top: .2rem;
+    display: block;
 
     &:before{ vertical-align: middle; }
+
+    @media (min-width: $screen-sm-min){ margin-top: 0; }
+  }
+
+  span{
+    display: none;
+    font-size: 1rem;
+    @media (min-width: $screen-sm-min){ display: block; }
   }
 
   ul{

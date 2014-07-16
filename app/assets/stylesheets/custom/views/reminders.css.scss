@@ -1,1 +1,14 @@
-#reminders-page{  }
+#reminders-page{  
+  .date{ width: 20%; }
+  .recipient{ width: 40%; }
+  .edit{ 
+    width: 40%; 
+
+    i.fa{ color: $gray-dark; }
+  }
+
+  ul.reminder-list{ 
+    border-radius: 2px; 
+    padding: 1em;
+  }
+}
