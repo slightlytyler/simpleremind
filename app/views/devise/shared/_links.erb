@@ -3,7 +3,7 @@
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to_modal "Don't have an account? Sign up!", new_registration_path(resource_name), class: "btn btn-hollow btn-lg alt-login-option" %><br />
+  <%= link_to "Don't have an account? Sign up!", new_registration_path(resource_name), class: "btn btn-hollow btn-lg alt-login-option" %><br />
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>

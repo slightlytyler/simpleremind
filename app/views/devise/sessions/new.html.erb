@@ -9,11 +9,11 @@
     <%= f.submit "LOG IN", class: "btn btn-default btn-lg" %>
 
     <% if devise_mapping.rememberable? -%>
-      <section class="remember-me col-md-6 slab"><%= f.check_box :remember_me %> <%= f.label :remember_me, class: 'slabtext hard-shadow' %></section>
+      <section class="remember-me col-md-6"><%= f.check_box :remember_me %> <%= f.label :remember_me, class: 'slabtext hard-shadow' %></section>
     <% end -%>
 
     <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-      <section class="forgot-password col-md-6 slab"><%= link_to "Forgot your password?", new_password_path(resource_name), class: "white slabtext hard-shadow" %></section>
+      <section class="forgot-password col-md-6"><%= link_to "Forgot your password?", new_password_path(resource_name), class: "white slabtext hard-shadow" %></section>
     <% end -%>
 
   <% end %>

@@ -16,6 +16,8 @@ ul.reminder-list{
     padding: .4em 0;
     border-bottom: 1px dashed rgba(255,255,255,.35);
 
+    &:last-child{ border-bottom: none; }
+
     &.delivered .reminder-data{ 
       color: $gray-dark; 
       text-decoration: line-through;
@@ -23,9 +25,10 @@ ul.reminder-list{
     &.failed .reminder-data{ color: $red-fail; }
   }
 
+  span.line{ display: block;  }
+
   .reminder-data{
     font-size: 1.8rem;
-    display: block; 
     @extend .hard-shadow;
     color: $blue-light;
     display: inline-block;
