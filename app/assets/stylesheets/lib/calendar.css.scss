@@ -268,7 +268,6 @@
 }
 #cal-day-box #cal-day-panel {
   position: relative;
-  padding-left: 60px;
 }
 #cal-day-box #cal-day-panel-hour {
   position: absolute;
@@ -533,3 +532,4 @@ a.cal-event-week {
 .badge.pending{ @extend .bg-blue-main; }
 .badge.failed{ @extend .bg-red-fail; }
 .badge.delivered{ @extend .bg-gray-dark; }
+.no-reminders{ margin-top: 3rem; }

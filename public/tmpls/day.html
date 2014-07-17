@@ -1,73 +1,40 @@
 <div id="cal-day-box">
 	<div class="row-fluid clearfix cal-row-head">
-		<div class="span1 col-xs-3 cal-cell">Name</div>
-		<div class="span11 col-xs-9 cal-cell">Message</div>
+		<div class="recipient reminder-column cal-cell">Name</div>
+		<div class="message reminder-column cal-cell">Message</div>
+		<div class="edit reminder-column cal-cell">Edit</div>
 	</div>
-	<% if(all_day.length) {%>
-		<div class="row-fluid clearfix cal-day-hour">
-			<div class="span1 col-xs-1"><b><%= cal.locale.all_day %></b></div>
-			<div class="span11 col-xs-11">
-				<% _.each(all_day, function(event){ %>
-					<div class="day-highlight dh-<%= event.class %>">
-						<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
-						   data-event-class="<%= event['class'] %>" class="event-item">
-							<%= event.recipient %></a>
-					</div>
-				<% }); %>
-			</div>
-		</div>
-	<% }; %>
-	<% if(before_time.length) {%>
-		<div class="row-fluid clearfix cal-day-hour">
-			<div class="span1 col-xs-3"><b><%= cal.locale.before_time %></b></div>
-			<div class="span5 col-xs-5">
-				<% _.each(before_time, function(event){ %>
-					<div class="day-highlight dh-<%= event.class %>">
-						<span class="cal-hours pull-right"><%= event.end_hour %></span>
-						<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
-						   data-event-class="<%= event['class'] %>" class="event-item">
-							<%= event.recipient %></a>
-					</div>
-				<% }); %>
-			</div>
-		</div>
-	<% }; %>
 	<div id="cal-day-panel" class="clearfix">
-		<% _.each(by_hour, function(event){ %>
-			<div class="pull-left day-event day-highlight dh-<%= event.class %>" style="margin-top: <%= (event.top * 30) %>px; height: <%= (event.lines * 30) %>px">
-				<span class="cal-hours"><%= event.start_hour %> - <%= event.end_hour %></span>
-				<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
-				   data-event-class="<%= event['class'] %>" class="event-item">
-					<%= event.recipient %></a>
-			</div>
-		<% }); %>
+		<% if(by_hour.length) {%>
+			<ul class="reminder-list bg-burn padded">
+				<% _.each(by_hour, function(event){ %>
+		      <li class="<%= event.class %>">
+		      	<section class="recipient reminder-column">
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Recipient Name" class="reminder-data is-editable">James Baxter</a></span>
+						</section>
+						<section class="message reminder-column">
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Message" class="reminder-data is-editable">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac iaculis orci. Nunc interdum mauris id velit congue, at porttitor erat elementum. Curabitur dui felis, fermentum rutrum laoreet quis, tristique eget neque.</a></span>
+						</section>
+		        <section class="edit edit-nav clearfix reminder-column">
+		        	<% if (event.class == 'pending') { %>
+				        <i class="fa fa-pencil col-xs-4 toggle-editable" />
+		          	<i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+				      <% } %>
+				      <% if (event.class == 'failed') { %>
+				        <i class="fa fa-pencil col-xs-4 toggle-editable" />
+		          	<i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+		          	<i class="fa fa-mail-reply col-xs-4 resend" />
+				      <% } %>
+				      <% if (event.class == 'delivered') { %>
+				        <i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+				      <% } %>
+		        </section>
+		      </li>
+		    <% }); %>
+	    </ul>
+	  <% } else {%>
+	  	<h4 class="white hard-shadow center-text no-reminders">No reminders.</h4>
+	  <% } %>
 
-		<div id="cal-day-panel-hour">
-			<% for(i = 0; i < hours; i++){ %>
-				<div class="cal-day-hour">
-					<% for(l = 0; l < cal._hour_min(i); l++){ %>
-						<div class="row-fluid cal-day-hour-part">
-							<div class="span1 col-xs-1"><b><%= cal._hour(i, l) %></b></div>
-							<div class="span11 col-xs-11"></div>
-						</div>
-				<% }; %>
-				</div>
-			<% }; %>
-		</div>
 	</div>
-	<% if(after_time.length) {%>
-		<div class="row-fluid clearfix cal-day-hour">
-			<div class="span1 col-xs-3"><b><%= cal.locale.after_time %></b></div>
-			<div class="span11 col-xs-9">
-				<% _.each(after_time, function(event){ %>
-				<div class="day-highlight dh-<%= event.class %>">
-					<span class="cal-hours"><%= event.start_hour %></span>
-					<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
-					   data-event-class="<%= event['class'] %>" class="event-item">
-						<%= event.recipient %></a>
-				</div>
-				<% }); %>
-			</div>
-		</div>
-	<% }; %>
 </div>
