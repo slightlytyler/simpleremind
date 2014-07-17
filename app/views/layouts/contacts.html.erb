@@ -1,1 +1,93 @@
-my contacts
+<div id="contacts-page" class="app-page splash full-page-app">
+  <div class="outer-container short">
+    <h2 class="white hard-shadow">My Contacts</h2>
+
+    <section class="clearfix reminder-list-headers padded">
+      <section class="name reminder-column">
+        <h5 class="reminder-column-label">Name</h5>
+      </section>
+      <section class="phone-number reminder-column">
+        <h5 class="reminder-column-label">Phone Number</h5>
+      </section>
+      <section class="last-reminded reminder-column">
+        <h5 class="reminder-column-label">Last Reminded</h5>
+      </section>
+      <section class="edit reminder-column">
+        <h5 class="reminder-column-label">Edit</h5>
+      </section>
+    </section>
+
+    <ul class="reminder-list bg-burn padded">
+      <li>
+        <%= render :partial=>"/layouts/example_contact" %>
+        <section class="edit edit-nav clearfix reminder-column">
+          <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+          <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
+        </section>
+      </li>
+      <li>
+        <%= render :partial=>"/layouts/example_contact" %>
+        <section class="edit edit-nav clearfix reminder-column">
+          <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+          <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
+        </section>
+      </li>
+      <li>
+        <%= render :partial=>"/layouts/example_contact" %>
+        <section class="edit edit-nav clearfix reminder-column">
+          <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+          <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
+        </section>
+      </li>
+      <li>
+        <%= render :partial=>"/layouts/example_contact" %>
+        <section class="edit edit-nav clearfix reminder-column">
+          <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+          <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
+        </section>
+      </li>
+      <li>
+        <%= render :partial=>"/layouts/example_contact" %>
+        <section class="edit edit-nav clearfix reminder-column">
+          <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+          <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
+        </section>
+      </li>
+      <li>
+        <%= render :partial=>"/layouts/example_contact" %>
+        <section class="edit edit-nav clearfix reminder-column">
+          <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+          <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
+        </section>
+      </li>
+      <li>
+        <%= render :partial=>"/layouts/example_contact" %>
+        <section class="edit edit-nav clearfix reminder-column">
+          <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+          <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
+        </section>
+      </li>
+      <li>
+        <%= render :partial=>"/layouts/example_contact" %>
+        <section class="edit edit-nav clearfix reminder-column">
+          <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+          <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
+        </section>
+      </li>
+      <li>
+        <%= render :partial=>"/layouts/example_contact" %>
+        <section class="edit edit-nav clearfix reminder-column">
+          <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+          <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
+        </section>
+      </li>
+      <li>
+        <%= render :partial=>"/layouts/example_contact" %>
+        <section class="edit edit-nav clearfix reminder-column">
+          <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+          <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
+        </section>
+      </li>
+    </ul>
+  </div>
+</div>

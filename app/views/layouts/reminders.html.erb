@@ -17,31 +17,21 @@
           <h4 class="blue-main hard-shadow">Upcoming Sends</h4>
         </section>
 
-        <section class="clearfix reminder-list-headers">
-          <section class="date">
-            <h5 class="reminder-column-label">Date</h5>
-          </section>
-          <section class="recipient">
-            <h5 class="reminder-column-label">Recipient</h5>
-          </section>
-          <section class="edit">
-            <h5 class="reminder-column-label">Edit</h5>
-          </section>
-        </section>
+        <%= render :partial=>"/layouts/reminder_column_headers" %>
 
-        <ul class="reminder-list bg-burn">
+        <ul class="reminder-list bg-burn padded">
           <li>
             <%= render :partial=>"/layouts/example_reminder" %>
-            <section class="edit clearfix">
-              <%=fa_icon "pencil", class: 'col-xs-4' %>
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            <section class="edit edit-nav clearfix reminder-column">
+              <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+              <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
             </section>
           </li>
           <li>
             <%= render :partial=>"/layouts/example_reminder" %>
-            <section class="edit">
-              <%=fa_icon "pencil", class: 'col-xs-4' %>
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            <section class="edit edit-nav clearfix reminder-column">
+              <%=fa_icon "pencil", class: 'col-xs-6 toggle-editable' %>
+              <%=fa_icon "trash-o", class: 'col-xs-6 toggle-destroy' %>
             </section>
           </li>
         </ul>
@@ -52,32 +42,22 @@
           <h4 class="blue-main hard-shadow">Failed Sends</h4>
         </section>
 
-        <section class="clearfix reminder-list-headers">
-          <section class="date">
-            <h5 class="reminder-column-label">Date</h5>
-          </section>
-          <section class="recipient">
-            <h5 class="reminder-column-label">Recipient</h5>
-          </section>
-          <section class="edit">
-            <h5 class="reminder-column-label">Edit</h5>
-          </section>
-        </section>
+        <%= render :partial=>"/layouts/reminder_column_headers" %>
 
-        <ul class="reminder-list bg-burn">
+        <ul class="reminder-list bg-burn padded">
           <li class="failed">
             <%= render :partial=>"/layouts/example_reminder" %>
-            <section class="edit">
-              <%=fa_icon "pencil", class: 'col-xs-4' %>
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            <section class="edit edit-nav clearfix reminder-column">
+              <%=fa_icon "pencil", class: 'col-xs-4 toggle-editable' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4 toggle-destroy' %>
               <%=fa_icon "mail-reply", class: 'col-xs-4' %>
             </section>
           </li>
           <li class="failed">
             <%= render :partial=>"/layouts/example_reminder" %>
-            <section class="edit">
-              <%=fa_icon "pencil", class: 'col-xs-4' %>
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            <section class="edit edit-nav clearfix reminder-column">
+              <%=fa_icon "pencil", class: 'col-xs-4 toggle-editable' %>
+              <%=fa_icon "trash-o", class: 'col-xs-4  toggle-destroy' %>
               <%=fa_icon "mail-reply", class: 'col-xs-4' %>
             </section>
           </li>
@@ -89,35 +69,25 @@
           <h4 class="blue-main hard-shadow">Completed Sends</h4>
         </section>
 
-        <section class="clearfix reminder-list-headers">
-          <section class="date">
-            <h5 class="reminder-column-label">Date</h5>
-          </section>
-          <section class="recipient">
-            <h5 class="reminder-column-label">Recipient</h5>
-          </section>
-          <section class="edit">
-            <h5 class="reminder-column-label">Edit</h5>
-          </section>
-        </section>
+        <%= render :partial=>"/layouts/reminder_column_headers" %>
 
-        <ul class="reminder-list bg-burn">
+        <ul class="reminder-list bg-burn padded">
           <li class="delivered">
             <%= render :partial=>"/layouts/example_reminder" %>
-            <section class="edit">
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            <section class="edit edit-nav clearfix reminder-column">
+              <%=fa_icon "trash-o", class: 'col-xs-4 toggle-destroy' %>
             </section>
           </li>
           <li class="delivered">
             <%= render :partial=>"/layouts/example_reminder" %>
-             <section class="edit">
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+             <section class="edit edit-nav clearfix reminder-column">
+              <%=fa_icon "trash-o", class: 'col-xs-4 toggle-destroy' %>
             </section>
           </li>
           <li class="delivered">
             <%= render :partial=>"/layouts/example_reminder" %>
-            <section class="edit">
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
+            <section class="edit edit-nav clearfix reminder-column">
+              <%=fa_icon "trash-o", class: 'col-xs-4 toggle-destroy' %>
             </section>
           </li>
         </ul>

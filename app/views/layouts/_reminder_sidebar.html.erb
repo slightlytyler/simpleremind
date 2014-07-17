@@ -2,10 +2,10 @@
   <div class="inner">
     <h4 class="title white hard-shadow">Upcoming Reminders</h4>
     <section class="clearfix reminder-list-headers">
-      <section class="date">
+      <section class="date reminder-column">
         <h5 class="reminder-column-label">Date</h5>
       </section>
-      <section class="recipient">
+      <section class="recipient reminder-column">
         <h5 class="reminder-column-label">Recipient</h5>
       </section>
     </section>
@@ -35,10 +35,10 @@
   </div>
   <nav id="reminder-edit-nav" class="tab-bar bg-burn to-bottom" role="navigation">
     <div class="container-fluid">
-      <ul class="nav navbar-nav center-text">
-        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "pencil", class: 'hard-shadow', id: 'toggle-editable' %></li>
-        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "trash-o", class: 'hard-shadow', id: 'toggle-destroy' %></li>
-        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "undo", class: 'hard-shadow', id: 'undo' %></li>
+      <ul class="nav navbar-nav center-text edit edit-nav">
+        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "pencil", class: 'toggle-editable', id: 'toggle-editable' %></li>
+        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "trash-o", class: 'toggle-destroy', id: 'toggle-destroy' %></li>
+        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "undo", class: 'undo', id: 'undo' %></li>
       </ul>
     </div><!-- /.container-fluid -->
   </nav>

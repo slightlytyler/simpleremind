@@ -10,6 +10,11 @@ ul.reminder-list{
     .destroy-reminder{ display: initial; }
   }
 
+  &.padded{
+    border-radius: 2px; 
+    padding: 1em;
+  }
+
   li{ 
     @extend .clearfix;
     position: relative;
@@ -34,20 +39,11 @@ ul.reminder-list{
     display: inline-block;
   }
 
-  .edit i{
-    font-size: 3rem;
-    text-align: center;
-  }
   .resend-reminder, .destroy-reminder{
-    opacity: .25;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 8px;
-    font-size: 3rem;
-    @extend .hard-shadow;
-
-    &:hover{ opacity: .65; }
   }
 
   .resend-reminder{ color: white; }
@@ -60,6 +56,11 @@ ul.reminder-list{
 .reminder-list-headers{ 
   margin-top: 1.6em;
 
+  &.padded{ 
+    padding-left: 1em; 
+    padding-right: 1em;
+  }
+
   .reminder-column-label{ 
     display: inline-block;
     text-align: left;
@@ -71,6 +72,23 @@ ul.reminder-list{
 }
 
 ul.reminder-list, .reminder-list-headers{
-  max-width: 30em;
-  .date, .recipient, .edit{ float: left; }
+  .reminder-column{ float: left; }
 }
+
+.edit-nav{
+   color: white;
+
+   i:hover, i.active{
+    &.toggle-editable{ color: $yellow-edit; }
+    &.toggle-destroy{ color: $red-destroy; }
+    &.undo { color: $blue-light; }
+   }
+}
+
+.edit i, .resend-reminder, .destroy-reminder{ 
+    font-size: 3rem; 
+    opacity: .25;
+    @extend .hard-shadow;
+
+    &:hover, &.active{ opacity: .65; }
+  }

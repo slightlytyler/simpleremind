@@ -39,15 +39,8 @@
 
   i{
    font-size: 3rem;
-   @extend .dodge;
    display: inline-block;
    height: auto;
    line-height: 50px;
-
-   &:hover, &.active{
-    &#toggle-editable{ color: $yellow-edit; }
-    &#toggle-destroy{ color: $red-destroy; }
-    &#undo { color: $blue-light; }
-   }
   }
 }

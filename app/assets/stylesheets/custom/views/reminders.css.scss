@@ -1,14 +1,6 @@
-#reminders-page{  
+#reminders-page{
+  ul.reminder-list, .reminder-list-headers{ max-width: 30em; }
   .date{ width: 20%; }
   .recipient{ width: 40%; }
-  .edit{ 
-    width: 40%; 
-
-    i.fa{ color: $gray-dark; }
-  }
-
-  ul.reminder-list{ 
-    border-radius: 2px; 
-    padding: 1em;
-  }
+  .edit{ width: 40%; }
 }
