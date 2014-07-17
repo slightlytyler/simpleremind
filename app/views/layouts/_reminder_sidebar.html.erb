@@ -11,54 +11,24 @@
     </section>
     <ul class="reminder-list">
       <li>
-        <section class="date">
-          <a href="#" data-type="text" data-pk="1" data-title="Delivery date" class="reminder-data is-editable">7/6/14</a>
-        </section>
-        <section class="recipient">
-          <a href="#" data-type="text" data-pk="1" data-title="Recepient name" class="reminder-data is-editable">Sarah Lee</a>
-          <a href="#" data-type="text" data-pk="1" data-title="Phone #" class="reminder-data is-editable">(972) 772 5142</a>
-        </section>
+        <%= render :partial=>"/layouts/example_reminder" %>
         <%= fa_icon "times", class: 'destroy-reminder' %>
       </li>
       <li>
-        <section class="date">
-          <a href="#" data-type="text" data-pk="1" data-title="Delivery date" class="reminder-data is-editable">7/4/14</a>
-        </section>
-        <section class="recipient">
-          <a href="#" data-type="text" data-pk="1" data-title="Recepient name" class="reminder-data is-editable">John Doe</a>
-          <a href="#" data-type="text" data-pk="1" data-title="Phone #" class="reminder-data is-editable">(214) 901 6983</a>
-        </section>
+        <%= render :partial=>"/layouts/example_reminder" %>
         <%= fa_icon "times", class: 'destroy-reminder' %>
       </li>
       <li class="failed">
-        <section class="date">
-          <a href="#" data-type="text" data-pk="1" data-title="Delivery date" class="reminder-data is-editable">7/3/14</a>
-        </section>
-        <section class="recipient">
-          <a href="#" data-type="text" data-pk="1" data-title="Recepient name" class="reminder-data is-editable">Greg Andrews</a>
-          <a href="#" data-type="text" data-pk="1" data-title="Phone #" class="reminder-data is-editable">(489) 430 0071</a>
-        </section>
+        <%= render :partial=>"/layouts/example_reminder" %>
         <%= fa_icon "times", class: 'destroy-reminder' %>
         <%= fa_icon "mail-reply", class: 'resend-reminder' %>
       </li>
       <li class="delivered">
-        <section class="date">
-          <a href="#" data-type="text" data-pk="1" data-title="Delivery date" class="reminder-data">7/3/14</a>
-        </section>
-        <section class="recipient">
-          <a href="#" data-type="text" data-pk="1" data-title="Recepient name" class="reminder-data">Lynn Flint</a>
-          <a href="#" data-type="text" data-pk="1" data-title="Phone #" class="reminder-data">(972) 978 3111</a>
-        </section>
+        <%= render :partial=>"/layouts/example_reminder" %>
         <%= fa_icon "times", class: 'destroy-reminder' %>
       </li>
       <li class="delivered">
-        <section class="date">
-          <a href="#" data-type="text" data-pk="1" data-title="Delivery date" class="reminder-data">7/6/14</a>
-        </section>
-        <section class="recipient">
-          <a href="#" data-type="text" data-pk="1" data-title="Recepient name" class="reminder-data">Sarah Lee</a>
-          <a href="#" data-type="text" data-pk="1" data-title="Phone #" class="reminder-data">(972) 772 5142</a>
-        </section>
+        <%= render :partial=>"/layouts/example_reminder" %>
         <%= fa_icon "times", class: 'destroy-reminder' %>
       </li>
     </ul>

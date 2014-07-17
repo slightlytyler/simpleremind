@@ -31,65 +31,14 @@
 
         <ul class="reminder-list bg-burn">
           <li>
-            <section class="date">
-              <span>7/6/14</span>
-            </section>
-            <section class="recipient">
-              <span>Sarah Lee</span>
-              <span>(972) 772 5142</span>
-            </section>
+            <%= render :partial=>"/layouts/example_reminder" %>
             <section class="edit clearfix">
               <%=fa_icon "pencil", class: 'col-xs-4' %>
               <%=fa_icon "trash-o", class: 'col-xs-4' %>
             </section>
           </li>
           <li>
-            <section class="date">
-              <span>7/4/14</span>
-            </section>
-            <section class="recipient">
-              <span>John Doe</span>
-              <span>(214) 901 6983</span>
-            </section>
-            <section class="edit">
-              <%=fa_icon "pencil", class: 'col-xs-4' %>
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
-            </section>
-          </li>
-          <li>
-            <section class="date">
-              <span>7/3/14</span>
-            </section>
-            <section class="recipient">
-              <span>Greg Andrews</span>
-              <span>(489) 430 0071</span>
-            </section>
-            <section class="edit">
-              <%=fa_icon "pencil", class: 'col-xs-4' %>
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
-            </section>
-          </li>
-          <li>
-            <section class="date">
-              <span>7/3/14</span>
-            </section>
-            <section class="recipient">
-              <span>Lynn Flint</span>
-              <span>(972) 978 3111</span>
-            </section>
-            <section class="edit">
-              <%=fa_icon "pencil", class: 'col-xs-4' %>
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
-            </section>
-          </li>
-          <li>
-            <section class="date">
-              <span>7/6/14</span>
-            </section>
-            <section class="recipient">
-              <span>Sarah Lee</span>
-              <span>(972) 772 5142</span>
-            </section>
+            <%= render :partial=>"/layouts/example_reminder" %>
             <section class="edit">
               <%=fa_icon "pencil", class: 'col-xs-4' %>
               <%=fa_icon "trash-o", class: 'col-xs-4' %>
@@ -117,13 +66,7 @@
 
         <ul class="reminder-list bg-burn">
           <li class="failed">
-            <section class="date">
-              <span>7/6/14</span>
-            </section>
-            <section class="recipient">
-              <span>Sarah Lee</span>
-              <span>(972) 772 5142</span>
-            </section>
+            <%= render :partial=>"/layouts/example_reminder" %>
             <section class="edit">
               <%=fa_icon "pencil", class: 'col-xs-4' %>
               <%=fa_icon "trash-o", class: 'col-xs-4' %>
@@ -131,55 +74,7 @@
             </section>
           </li>
           <li class="failed">
-            <section class="date">
-              <span>7/4/14</span>
-            </section>
-            <section class="recipient">
-              <span>John Doe</span>
-              <span>(214) 901 6983</span>
-            </section>
-            <section class="edit">
-              <%=fa_icon "pencil", class: 'col-xs-4' %>
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
-              <%=fa_icon "mail-reply", class: 'col-xs-4' %>
-            </section>
-          </li>
-          <li class="failed">
-            <section class="date">
-              <span>7/3/14</span>
-            </section>
-            <section class="recipient">
-              <span>Greg Andrews</span>
-              <span>(489) 430 0071</span>
-            </section>
-            <section class="edit">
-              <%=fa_icon "pencil", class: 'col-xs-4' %>
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
-              <%=fa_icon "mail-reply", class: 'col-xs-4' %>
-            </section>
-          </li>
-          <li class="failed">
-            <section class="date">
-              <span>7/3/14</span>
-            </section>
-            <section class="recipient">
-              <span>Lynn Flint</span>
-              <span>(972) 978 3111</span>
-            </section>
-            <section class="edit">
-              <%=fa_icon "pencil", class: 'col-xs-4' %>
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
-              <%=fa_icon "mail-reply", class: 'col-xs-4' %>
-            </section>
-          </li>
-          <li class="failed">
-            <section class="date">
-              <span>7/6/14</span>
-            </section>
-            <section class="recipient">
-              <span>Sarah Lee</span>
-              <span>(972) 772 5142</span>
-            </section>
+            <%= render :partial=>"/layouts/example_reminder" %>
             <section class="edit">
               <%=fa_icon "pencil", class: 'col-xs-4' %>
               <%=fa_icon "trash-o", class: 'col-xs-4' %>
@@ -208,62 +103,20 @@
 
         <ul class="reminder-list bg-burn">
           <li class="delivered">
-            <section class="date">
-              <span>7/6/14</span>
-            </section>
-            <section class="recipient">
-              <span>Sarah Lee</span>
-              <span>(972) 772 5142</span>
-            </section>
+            <%= render :partial=>"/layouts/example_reminder" %>
             <section class="edit">
               <%=fa_icon "trash-o", class: 'col-xs-4' %>
             </section>
           </li>
           <li class="delivered">
-            <section class="date">
-              <span>7/4/14</span>
-            </section>
-            <section class="recipient">
-              <span>John Doe</span>
-              <span>(214) 901 6983</span>
-            </section>
+            <%= render :partial=>"/layouts/example_reminder" %>
              <section class="edit">
               <%=fa_icon "trash-o", class: 'col-xs-4' %>
             </section>
           </li>
           <li class="delivered">
-            <section class="date">
-              <span>7/3/14</span>
-            </section>
-            <section class="recipient">
-              <span>Greg Andrews</span>
-              <span>(489) 430 0071</span>
-            </section>
-             <section class="edit">
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
-            </section>
-          </li>
-          <li class="delivered">
-            <section class="date">
-              <span>7/3/14</span>
-            </section>
-            <section class="recipient">
-              <span>Lynn Flint</span>
-              <span>(972) 978 3111</span>
-            </section>
-             <section class="edit">
-              <%=fa_icon "trash-o", class: 'col-xs-4' %>
-            </section>
-          </li>
-          <li class="delivered">
-            <section class="date">
-              <span>7/6/14</span>
-            </section>
-            <section class="recipient">
-              <span>Sarah Lee</span>
-              <span>(972) 772 5142</span>
-            </section>
-             <section class="edit">
+            <%= render :partial=>"/layouts/example_reminder" %>
+            <section class="edit">
               <%=fa_icon "trash-o", class: 'col-xs-4' %>
             </section>
           </li>
