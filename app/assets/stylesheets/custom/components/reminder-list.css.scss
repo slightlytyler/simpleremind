@@ -63,11 +63,28 @@ ul.reminder-list{
 
   .reminder-column-label{ 
     display: inline-block;
+    position: relative;
     text-align: left;
     border-bottom: 2px solid white;
     padding: 0;
     padding-right: 1em;
     color: white;
+    @extend .hard-shadow;
+
+    &.sortable:hover, &.active{ color: $gray-dark; }
+    &.asc:after, &.desc:after{
+      font-family: FontAwesome;
+      position: absolute;
+      right: 0;
+    }
+    &.asc:after{
+      content: "\f106";
+    }
+
+    &.desc:after{
+      content: "\f107";
+    }
+
   } 
 }
 
@@ -86,9 +103,9 @@ ul.reminder-list, .reminder-list-headers{
 }
 
 .edit i, .resend-reminder, .destroy-reminder{ 
-    font-size: 3rem; 
-    opacity: .25;
-    @extend .hard-shadow;
+  font-size: 3rem; 
+  opacity: .25;
+  @extend .hard-shadow;
 
-    &:hover, &.active{ opacity: .65; }
-  }
+  &:hover, &.active{ opacity: .65; }
+}
