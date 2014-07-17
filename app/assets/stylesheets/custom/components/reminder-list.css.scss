@@ -1,32 +1,56 @@
 ul.reminder-list{ 
-  overflow: auto; 
+  //overflow: auto; 
   margin-bottom: 0;
   width: 100%;
   list-style: none;
   padding-left: 0;
 
+  &.is-destroying{
+    .resend-reminder{ display: none; }
+    .destroy-reminder{ display: initial; }
+  }
+
   li{ 
     @extend .clearfix;
+    position: relative;
     padding: .4em 0;
     border-bottom: 1px dashed rgba(255,255,255,.35);
 
-    &.delivered span{ 
+    &.delivered .reminder-data{ 
       color: $gray-dark; 
       text-decoration: line-through;
     }
-    &.failed span{ color: $red-fail; }
+    &.failed .reminder-data{ color: $red-fail; }
   }
 
-  span{
+  .reminder-data{
     font-size: 1.8rem;
     display: block; 
     @extend .hard-shadow;
     color: $blue-light;
+    display: inline-block;
   }
 
   .edit i{
     font-size: 3rem;
     text-align: center;
+  }
+  .resend-reminder, .destroy-reminder{
+    opacity: .25;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    font-size: 3rem;
+    @extend .hard-shadow;
+
+    &:hover{ opacity: .65; }
+  }
+
+  .resend-reminder{ color: white; }
+  .destroy-reminder{
+    display: none;
+    color: $red-destroy;
   }
 }
 

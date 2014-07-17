@@ -77,7 +77,34 @@ function pageLoad(){
 
   // My account tabs 
   $('.underline-list a[href="#user-info"]').tab('show');
+
+  // My reminders tabs
   $('.underline-list a[href="#upcoming"]').tab('show');
+
+  // Editable items
+  $('.is-editable').click(function(e) {
+    e.preventDefault();
+  });
+
+  $('.is-editable').editable({
+    disabled: true
+  });
+
+  $('#toggle-editable').click(function(e){   
+    e.preventDefault(); 
+    e.stopPropagation();
+    $(this).toggleEditable();
+    $(this).toggleDestroy(false);
+  });
+
+  // Toggle destroy elements (reminder-list)
+  $('#toggle-destroy').click(function(e){   
+    e.preventDefault(); 
+    e.stopPropagation();
+    $(this).toggleDestroy();
+    $(this).toggleEditable(false);
+  });
+
 
   // Size specific functions
   //

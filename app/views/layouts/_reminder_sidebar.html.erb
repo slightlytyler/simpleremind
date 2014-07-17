@@ -12,57 +12,63 @@
     <ul class="reminder-list">
       <li>
         <section class="date">
-          <span>7/6/14</span>
+          <a href="#" data-type="text" data-pk="1" data-title="Delivery date" class="reminder-data is-editable">7/6/14</a>
         </section>
         <section class="recipient">
-          <span>Sarah Lee</span>
-          <span>(972) 772 5142</span>
+          <a href="#" data-type="text" data-pk="1" data-title="Recepient name" class="reminder-data is-editable">Sarah Lee</a>
+          <a href="#" data-type="text" data-pk="1" data-title="Phone #" class="reminder-data is-editable">(972) 772 5142</a>
         </section>
+        <%= fa_icon "times", class: 'destroy-reminder' %>
       </li>
       <li>
         <section class="date">
-          <span>7/4/14</span>
+          <a href="#" data-type="text" data-pk="1" data-title="Delivery date" class="reminder-data is-editable">7/4/14</a>
         </section>
         <section class="recipient">
-          <span>John Doe</span>
-          <span>(214) 901 6983</span>
+          <a href="#" data-type="text" data-pk="1" data-title="Recepient name" class="reminder-data is-editable">John Doe</a>
+          <a href="#" data-type="text" data-pk="1" data-title="Phone #" class="reminder-data is-editable">(214) 901 6983</a>
         </section>
+        <%= fa_icon "times", class: 'destroy-reminder' %>
       </li>
       <li class="failed">
         <section class="date">
-          <span>7/3/14</span>
+          <a href="#" data-type="text" data-pk="1" data-title="Delivery date" class="reminder-data is-editable">7/3/14</a>
         </section>
         <section class="recipient">
-          <span>Greg Andrews</span>
-          <span>(489) 430 0071</span>
+          <a href="#" data-type="text" data-pk="1" data-title="Recepient name" class="reminder-data is-editable">Greg Andrews</a>
+          <a href="#" data-type="text" data-pk="1" data-title="Phone #" class="reminder-data is-editable">(489) 430 0071</a>
         </section>
+        <%= fa_icon "times", class: 'destroy-reminder' %>
+        <%= fa_icon "mail-reply", class: 'resend-reminder' %>
       </li>
       <li class="delivered">
         <section class="date">
-          <span>7/3/14</span>
+          <a href="#" data-type="text" data-pk="1" data-title="Delivery date" class="reminder-data">7/3/14</a>
         </section>
         <section class="recipient">
-          <span>Lynn Flint</span>
-          <span>(972) 978 3111</span>
+          <a href="#" data-type="text" data-pk="1" data-title="Recepient name" class="reminder-data">Lynn Flint</a>
+          <a href="#" data-type="text" data-pk="1" data-title="Phone #" class="reminder-data">(972) 978 3111</a>
         </section>
+        <%= fa_icon "times", class: 'destroy-reminder' %>
       </li>
       <li class="delivered">
         <section class="date">
-          <span>7/6/14</span>
+          <a href="#" data-type="text" data-pk="1" data-title="Delivery date" class="reminder-data">7/6/14</a>
         </section>
         <section class="recipient">
-          <span>Sarah Lee</span>
-          <span>(972) 772 5142</span>
+          <a href="#" data-type="text" data-pk="1" data-title="Recepient name" class="reminder-data">Sarah Lee</a>
+          <a href="#" data-type="text" data-pk="1" data-title="Phone #" class="reminder-data">(972) 772 5142</a>
         </section>
+        <%= fa_icon "times", class: 'destroy-reminder' %>
       </li>
     </ul>
   </div>
   <nav id="reminder-edit-nav" class="tab-bar bg-burn to-bottom" role="navigation">
     <div class="container-fluid">
       <ul class="nav navbar-nav center-text">
-        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "pencil", class: 'hard-shadow' %></li>
-        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "trash-o", class: 'hard-shadow' %></li>
-        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "undo", class: 'hard-shadow' %></li>
+        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "pencil", class: 'hard-shadow', id: 'toggle-editable' %></li>
+        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "trash-o", class: 'hard-shadow', id: 'toggle-destroy' %></li>
+        <li class="col-md-4 col-sm-4 col-xs-4"><%= fa_icon "undo", class: 'hard-shadow', id: 'undo' %></li>
       </ul>
     </div><!-- /.container-fluid -->
   </nav>

@@ -25,5 +25,6 @@
 //= require lib/utility/bootstrap-editable
 //= require lib/components/tab-bar
 //= require lib/components/sidr
+//= require lib/components/reminder-edit
 //= require jquery.ui.all
 //= require jquery.modal
