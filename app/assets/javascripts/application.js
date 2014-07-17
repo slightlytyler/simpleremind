@@ -21,10 +21,11 @@
 //= require lib/utility/retina
 //= require lib/utility/smooth-hash-nav
 //= require lib/utility/actual-height
-//= require lib/utility/tiny-scrollbar
+//= require lib/utility/underscore-min
 //= require lib/utility/bootstrap-editable
 //= require lib/components/tab-bar
 //= require lib/components/sidr
 //= require lib/components/reminder-edit
+//= require lib/components/calendar
 //= require jquery.ui.all
 //= require jquery.modal

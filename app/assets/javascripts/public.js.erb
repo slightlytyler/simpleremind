@@ -105,6 +105,79 @@ function pageLoad(){
     $(this).toggleEditable(false);
   });
 
+  // Calendar init
+  var datetime = new Date();
+  var current = datetime.getTime();
+  var oneDay = 86400000;
+  var options = {
+    events_source: [
+      {
+          "id": 1,
+          "title": "Reminder 1",
+          "class": "pending",
+          "start": current, // Milliseconds
+          "end": current + 6000 // Milliseconds
+      },
+      {
+          "id": 2,
+          "title": "Reminder 2",
+          "class": "pending",
+          "start": current - (oneDay), // Milliseconds
+          "end": current + 6000 - (oneDay) // Milliseconds
+      },
+      {
+          "id": 3,
+          "title": "Reminder 3",
+          "class": "delivered",
+          "start": current - (2 * oneDay), // Milliseconds
+          "end": current + 6000 - (2 * oneDay) // Milliseconds
+      },
+      {
+          "id": 4,
+          "title": "Reminder 4",
+          "class": "failed",
+          "start": current - (3 * oneDay), // Milliseconds
+          "end": current + 6000 - (3 * oneDay) // Milliseconds
+      },
+      {
+          "id": 5,
+          "title": "Reminder 5",
+          "class": "delivered",
+          "start": current - (6 * oneDay), // Milliseconds
+          "end": current + 6000 - (6 * oneDay) // Milliseconds
+      },
+      {
+          "id": 6,
+          "title": "Reminder 6",
+          "class": "delivered",
+          "start": current - (7 * oneDay), // Milliseconds
+          "end": current + 6000 - (7 * oneDay) // Milliseconds
+      }
+    ],
+    view: 'month',
+    tmpl_path: '/tmpls/',
+    tmpl_cache: false,
+    onAfterViewLoad: function(view) {
+      $('.btn-group button').removeClass('active');
+      $('button[data-calendar-view="' + view + '"]').addClass('active');
+    }
+  };
+
+  var calendar = $('#calendar').calendar(options);    
+
+  $('.btn-group button[data-calendar-nav]').each(function() {
+    var $this = $(this);
+    $this.click(function() {
+      calendar.navigate($this.data('calendar-nav'));
+    });
+  });
+
+  $('.btn-group button[data-calendar-view]').each(function() {
+    var $this = $(this);
+    $this.click(function() {
+      calendar.view($this.data('calendar-view'));
+    });
+  }); 
 
   // Size specific functions
   //
