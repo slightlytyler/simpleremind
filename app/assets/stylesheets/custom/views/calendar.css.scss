@@ -1,0 +1,11 @@
+#calendar-page{
+  .title{ margin-bottom: .4em; }
+  .calendar-title{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    margin: 0;
+  }
+
+  #calendar{ margin-bottom: 3em; }
+}

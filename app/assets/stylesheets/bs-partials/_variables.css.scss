@@ -13,7 +13,9 @@ $red-destroy: red;
 $yellow-edit: yellow;
 $eggshell: #f2f2f2;
 $burn: rgba(0,0,0,.3);
+$burn-light: rgba(0,0,0,.05);
 $dodge: rgba(255,255,255,.5);
+$dodge-light: rgba(255,255,255,.15);
 
 .blue-main{ color: $blue-main; }
 .bg-blue-main{ background-color: $blue-main; }
@@ -42,6 +44,8 @@ $dodge: rgba(255,255,255,.5);
 .gray-light{ color: $gray-light; }
 .bg-gray-light{ background-color: $gray-light; }
 
+.bg-red-fail{ background-color: $red-fail; }
+
 .eggshell { color: $eggshell; }
 .bg-eggshell { background-color: $eggshell; }
 
@@ -51,7 +55,7 @@ $dodge: rgba(255,255,255,.5);
 .bg-burn { background-color: $burn; }
 
 .dodge{ color: $dodge; }
-.bg-dodge{ color: $dodge; }
+.bg-dodge{ background-color: $dodge; }
 
 // Grid
 $max-width: 1280px;

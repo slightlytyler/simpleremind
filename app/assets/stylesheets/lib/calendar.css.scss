@@ -1,3 +1,4 @@
+.cal-cell{ background-color: $dodge-light; }
 [class*="cal-cell"] {
   float: left;
   margin-left: 0;
@@ -392,9 +393,10 @@
   font-weight: normal;
 }
 .cal-year-box .row-fluid:hover,
-.cal-row-fluid:hover, .cal-row-head {
-  background-color: #fafafa;
+.cal-row-fluid:hover {
+  background-color: $dodge;
 }
+.cal-row-head{ background-color: white; }
 .cal-month-day {
   height: 100px;
 }
@@ -488,12 +490,10 @@ span[data-cal-date]:hover {
 #cal-slide-content {
   padding: 20px;
   color: #ffffff;
-  background-image: url("../img/dark_wood.png");
-  -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  background-color: $burn-light;
 }
 #cal-slide-tick {
-  background-image: url("../img/tick.png?2");
+  //background-image: url("../img/tick.png?2");
 }
 #cal-slide-content:hover {
   background-color: transparent;
@@ -517,3 +517,6 @@ a.cal-event-week {
 .badge-important {
   background-color: #b94a48;
 }
+.badge.pending{ @extend .bg-blue-main; }
+.badge.failed{ @extend .bg-red-fail; }
+.badge.delivered{ @extend .bg-gray-dark; }

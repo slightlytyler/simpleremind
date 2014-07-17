@@ -1,7 +1,7 @@
 <div id="cal-day-box">
 	<div class="row-fluid clearfix cal-row-head">
-		<div class="span1 col-xs-1 cal-cell"><%= cal.locale.time %></div>
-		<div class="span11 col-xs-11 cal-cell"><%= cal.locale.events %></div>
+		<div class="span1 col-xs-3 cal-cell">Name</div>
+		<div class="span11 col-xs-9 cal-cell">Message</div>
 	</div>
 	<% if(all_day.length) {%>
 		<div class="row-fluid clearfix cal-day-hour">
@@ -11,7 +11,7 @@
 					<div class="day-highlight dh-<%= event.class %>">
 						<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
 						   data-event-class="<%= event['class'] %>" class="event-item">
-							<%= event.title %></a>
+							<%= event.recipient %></a>
 					</div>
 				<% }); %>
 			</div>
@@ -26,7 +26,7 @@
 						<span class="cal-hours pull-right"><%= event.end_hour %></span>
 						<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
 						   data-event-class="<%= event['class'] %>" class="event-item">
-							<%= event.title %></a>
+							<%= event.recipient %></a>
 					</div>
 				<% }); %>
 			</div>
@@ -38,7 +38,7 @@
 				<span class="cal-hours"><%= event.start_hour %> - <%= event.end_hour %></span>
 				<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
 				   data-event-class="<%= event['class'] %>" class="event-item">
-					<%= event.title %></a>
+					<%= event.recipient %></a>
 			</div>
 		<% }); %>
 
@@ -56,18 +56,18 @@
 		</div>
 	</div>
 	<% if(after_time.length) {%>
-	<div class="row-fluid clearfix cal-day-hour">
-		<div class="span1 col-xs-3"><b><%= cal.locale.after_time %></b></div>
-		<div class="span11 col-xs-9">
-			<% _.each(after_time, function(event){ %>
-			<div class="day-highlight dh-<%= event.class %>">
-				<span class="cal-hours"><%= event.start_hour %></span>
-				<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
-				   data-event-class="<%= event['class'] %>" class="event-item">
-					<%= event.title %></a>
+		<div class="row-fluid clearfix cal-day-hour">
+			<div class="span1 col-xs-3"><b><%= cal.locale.after_time %></b></div>
+			<div class="span11 col-xs-9">
+				<% _.each(after_time, function(event){ %>
+				<div class="day-highlight dh-<%= event.class %>">
+					<span class="cal-hours"><%= event.start_hour %></span>
+					<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
+					   data-event-class="<%= event['class'] %>" class="event-item">
+						<%= event.recipient %></a>
+				</div>
+				<% }); %>
 			</div>
-			<% }); %>
 		</div>
-	</div>
 	<% }; %>
 </div>

@@ -30,8 +30,6 @@ ul.reminder-list{
     &.failed .reminder-data{ color: $red-fail; }
   }
 
-  span.line{ display: block;  }
-
   .reminder-data{
     font-size: 1.8rem;
     @extend .hard-shadow;
