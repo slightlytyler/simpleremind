@@ -1,28 +1,14 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Tools being used you should be aware of
 
-Things you may want to cover:
+[Float label js](http://clubdesign.github.io/floatlabels.js/) for labeless forms.
+[Retina js](http://imulus.github.io/retinajs/) for always serving the right size image.
+[Slab Text](http://freqdec.github.io/slabText/) for full headlines.
+[Bootstrap Calendar](http://bootstrap-calendar.azurewebsites.net/) for a base calendar.
+[underscore s](http://underscorejs.org/) for templating the calendar. Looks like embeded ruby but it's not.
+[Sidr](http://www.berriart.com/sidr/) for drawer navigation.
 
-* Ruby version
+#Other stuff going on
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Auto prefixer is installed so no need for vendor prefixes.
