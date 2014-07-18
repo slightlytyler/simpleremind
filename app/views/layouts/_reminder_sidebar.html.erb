@@ -1,14 +1,15 @@
 <div id="sidr" class="reminder-sidebar bg-burn">
-  <div class="inner">
+  
     <h4 class="title white hard-shadow">Upcoming Reminders</h4>
     <section class="clearfix reminder-list-headers">
       <section class="date reminder-column">
-        <h5 class="reminder-column-label sortable desc active">Date</h5>
+        <span class="reminder-column-label sortable desc active">Date</span>
       </section>
       <section class="recipient reminder-column">
-        <h5 class="reminder-column-label sortable">Recipient</h5>
+        <span class="reminder-column-label sortable">Recipient</span>
       </section>
     </section>
+    <div class="inner">
     <ul class="reminder-list">
       <li>
         <%= render :partial=>"/layouts/example_reminder" %>

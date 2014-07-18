@@ -408,6 +408,7 @@
 .cal-row-fluid:hover {
   background-color: $dodge;
 }
+.cal-row-head:hover{ background-color: white; }
 .cal-row-head{ background-color: white; }
 .cal-month-day {
   height: 100px;
@@ -468,10 +469,10 @@ span[data-cal-date]:hover {
   cursor: default;
 }
 .cal-day-today {
-  background-color: #e8fde7;
+  background-color: $blue-x-light-a;
 }
 .cal-day-today span[data-cal-date] {
-  color: darkgreen;
+  color: $blue-main;
 }
 .cal-month-box .cal-day-today span[data-cal-date] {
   font-size: 1.9em;

@@ -1,21 +1,21 @@
 <div id="cal-day-box">
 	<div class="row-fluid clearfix cal-row-head">
-		<div class="recipient reminder-column cal-cell">Name</div>
-		<div class="message reminder-column cal-cell">Message</div>
-		<div class="edit reminder-column cal-cell">Edit</div>
+		<div class="recipient reminder-column col-md-2 col-xs-3 cal-cell">Name</div>
+		<div class="message reminder-column col-md-8 col-xs-6 cal-cell">Message</div>
+		<div class="edit reminder-column col-md-2 col-xs-3 cal-cell">Edit</div>
 	</div>
 	<div id="cal-day-panel" class="clearfix">
 		<% if(by_hour.length) {%>
 			<ul class="reminder-list bg-burn padded">
 				<% _.each(by_hour, function(event){ %>
 		      <li class="<%= event.class %>">
-		      	<section class="recipient reminder-column">
+		      	<section class="recipient reminder-column col-md-2 col-xs-3">
 						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Recipient Name" class="reminder-data is-editable">James Baxter</a></span>
 						</section>
-						<section class="message reminder-column">
+						<section class="message reminder-column col-md-8 col-xs-6">
 						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Message" class="reminder-data is-editable">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac iaculis orci. Nunc interdum mauris id velit congue, at porttitor erat elementum. Curabitur dui felis, fermentum rutrum laoreet quis, tristique eget neque.</a></span>
 						</section>
-		        <section class="edit edit-nav clearfix reminder-column">
+		        <section class="edit edit-nav clearfix reminder-column col-md-2 col-xs-3">
 		        	<% if (event.class == 'pending') { %>
 				        <i class="fa fa-pencil col-xs-4 toggle-editable" />
 		          	<i class="fa fa-trash-o col-xs-4 toggle-destroy" />

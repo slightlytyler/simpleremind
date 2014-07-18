@@ -16,11 +16,13 @@
 
 .sidr.reminder-sidebar{
   position: absolute;
-  padding-top: 3em;
+  padding-top: 4em;
 
-  .inner{
-    padding-left: 2em;
+  .inner, .title{
+    padding-left: 2rem;
   }
+
+  .reminder-list-headers{ margin-bottom: 1em; }
 
   .date{
     width: 40%;

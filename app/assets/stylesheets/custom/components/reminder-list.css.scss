@@ -52,28 +52,32 @@ ul.reminder-list{
 }
 
 .reminder-list-headers{ 
-  margin-top: 1.6em;
+  background-color: white;
 
   &.padded{ 
     padding-left: 1em; 
     padding-right: 1em;
   }
 
+  .reminder-column{
+    text-align: center;
+
+    &:hover{ background-color: $eggshell-2; }
+  }
+  
   .reminder-column-label{ 
     display: inline-block;
     position: relative;
-    text-align: left;
-    border-bottom: 2px solid white;
-    padding: 0;
-    padding-right: 1em;
-    color: white;
-    @extend .hard-shadow;
+    font-weight: bolder;
+    border: 0px solid;
+    padding: 5px 0;
+    color: $gray-dark;
 
-    &.sortable:hover, &.active{ color: $gray-dark; }
+    &.sortable:hover, &.active{ }
     &.asc:after, &.desc:after{
       font-family: FontAwesome;
       position: absolute;
-      right: 0;
+      right: -1.2rem;
     }
     &.asc:after{
       content: "\f106";
