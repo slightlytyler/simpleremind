@@ -9,8 +9,9 @@
 @import "bs-partials/overrides";
 
 //Custom classes and IDs
-@import "custom/*";
+@import "custom/base/*";
 @import "custom/components/*";
-@import "custom/components/navigation/*";
-@import "custom/components/utility/*";
+//@import "custom/layout/*";
+//@import "custom/state/*";
+@import "custom/theme/*";
 @import "custom/views/*";
