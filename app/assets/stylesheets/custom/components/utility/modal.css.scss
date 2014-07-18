@@ -14,10 +14,9 @@
   z-index: 3 !important;
 
   a.close-modal {
-    visibility: hidden;
-
-    &::before{
-      visibility: visible;
+    font-size: 0;
+    
+    &:before{
       position: absolute;
       top: 0;
       right: .4em;

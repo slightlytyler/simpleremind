@@ -4,16 +4,13 @@
 
 //Importing Bootstrap core
 @import "bootstrap";
-@import "font-awesome";
 
 //Bootstrap overrides
 @import "bs-partials/overrides";
 
-//Utilities
-@import "bs-partials/utilities/*";
-
-//Font Awesome
-@import "font-awesome";
-
-//Library
-@import "lib/*";
+//Custom classes and IDs
+@import "custom/*";
+@import "custom/components/*";
+@import "custom/components/navigation/*";
+@import "custom/components/utility/*";
+@import "custom/views/*";

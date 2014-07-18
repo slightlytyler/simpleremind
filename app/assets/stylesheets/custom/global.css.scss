@@ -18,3 +18,108 @@ a{
 }
 
 p{ font-size: 1.4rem; }
+
+// Global
+.outer-container{
+    @include clearfix;
+    position: relative;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &.short{ max-width: $screen-sm-max }
+}
+
+.inline-list li{ display: inline-block; }
+
+// Fill Space
+.fill-horizontal{ width: 100%; }
+.fill-vertical{ height: 100%; }
+.block{ display: block; }
+
+// Position
+.float-none{ float: none; }
+
+.float-none-cascade{ 
+  float: none; 
+
+  & > *{ 
+    float: none !important;  
+    display: inline-block !important;
+  } 
+}
+
+.float-left{ float: left; }
+
+.float-right{ float: right; }
+
+.center-vertical{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-horizontal{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-absolute{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-vertical-rel{ 
+  margin-top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-horizontal-rel{
+  display: block;
+  margin: 0 auto;
+}
+
+.to-bottom{ 
+  position: absolute;
+  bottom: 0;
+}
+
+.center-text{ text-align: center; }
+.left-text{ text-align: left; }
+.right-text{ text-align: right; }
+
+span.line{ display: block;  }
+
+// Style
+.circle{ border-radius: 50%; }
+
+.border{
+  position: absolute;
+
+  &.bottom{
+    bottom: -12px;
+    left: 0;
+  }
+}
+.light{ font-weight: 400; }
+.lighter{ font-weight: lighter; }
+.bold{ font-weight: bold; }
+.bolder{ font-weight: bolder; }
+.italic{ font-style: italic; }
+.normal{ font-style: normal; }
+
+// Font Shadows
+.hard-shadow{ text-shadow: 0 .05em 0 rgba(62,71,76,0.35); }
+.hard-shadow-light{ text-shadow: 0 .05em 0 rgba(235,245,255,0.35); }
+.hard-shadow-white{ text-shadow: 0 .05em 0 white; }
+.hard-shadow-blue-main{ text-shadow: 0 .05em 0 $blue-main; }
+.hard-shadow-blue-light{ text-shadow: 0 .05em 0 $blue-light; }
+
+// Box Shadows
+.hard-shadow-box{ box-shadow: 0 .05em 0 rgba(62,71,76,0.35); }
+.natural-shadow-box { box-shadow: 0px 3px 6px rgba(0,0,0,0.5); }

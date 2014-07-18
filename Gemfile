@@ -55,6 +55,7 @@ gem 'jquery-ui-rails'
 gem 'jquery-modal-rails'
 gem 'sidr-rails'
 gem 'modernizr-rails'
+gem 'placeholder-gem'
 
 group :development, :test do
   gem 'wirble'             # used to look better the console

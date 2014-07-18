@@ -29,3 +29,4 @@
 //= require lib/components/calendar
 //= require jquery.ui.all
 //= require jquery.modal
+//= require placeholder
