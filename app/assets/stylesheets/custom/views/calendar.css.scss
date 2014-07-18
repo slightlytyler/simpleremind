@@ -5,6 +5,8 @@
     left: 50%;
     transform: translate(-50%, 20%);
     margin: 0;
+
+    &:first-letter{ text-transform: uppercase; }
   }
 
   #calendar{ margin-bottom: 3em; }

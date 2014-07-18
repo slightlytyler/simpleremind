@@ -13,6 +13,11 @@
 			<% start.setDate(start.getDate() + 1); %>
 		<% }) %>
 	</div>
+<% if(by_hour.length) {%>
 	<hr>
 	<%= cal._week() %>
 </div>
+<% } else {%>
+</div>
+<h4 class="white hard-shadow center-text no-reminders">No reminders.</h4>
+<% } %>
