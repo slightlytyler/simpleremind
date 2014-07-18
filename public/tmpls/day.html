@@ -1,6 +1,6 @@
 <div id="cal-day-box">
 	<div class="row-fluid clearfix cal-row-head">
-		<div class="recipient reminder-column col-md-2 col-xs-3 cal-cell">Name</div>
+		<div class="recipient reminder-column col-md-2 col-xs-3 cal-cell">Recipient</div>
 		<div class="message reminder-column col-md-8 col-xs-6 cal-cell">Message</div>
 		<div class="edit reminder-column col-md-2 col-xs-3 cal-cell">Edit</div>
 	</div>
@@ -11,6 +11,7 @@
 		      <li class="<%= event.class %>">
 		      	<section class="recipient reminder-column col-md-2 col-xs-3">
 						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Recipient Name" class="reminder-data is-editable">James Baxter</a></span>
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Phone Number" class="reminder-data is-editable">(214) 289 4321</a></span>
 						</section>
 						<section class="message reminder-column col-md-8 col-xs-6">
 						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Message" class="reminder-data is-editable">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac iaculis orci. Nunc interdum mauris id velit congue, at porttitor erat elementum. Curabitur dui felis, fermentum rutrum laoreet quis, tristique eget neque.</a></span>
@@ -32,9 +33,101 @@
 		      </li>
 		    <% }); %>
 	    </ul>
-	  <% } else {%>
-	  	<h4 class="white hard-shadow center-text no-reminders">No reminders.</h4>
 	  <% } %>
 
+	  <% if(before_time.length) {%>
+			<ul class="reminder-list bg-burn padded">
+				<% _.each(before_time, function(event){ %>
+		      <li class="<%= event.class %>">
+		      	<section class="recipient reminder-column col-md-2 col-xs-3">
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Recipient Name" class="reminder-data is-editable">James Baxter</a></span>
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Phone Number" class="reminder-data is-editable">(214) 289 4321</a></span>
+						</section>
+						<section class="message reminder-column col-md-8 col-xs-6">
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Message" class="reminder-data is-editable">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac iaculis orci. Nunc interdum mauris id velit congue, at porttitor erat elementum. Curabitur dui felis, fermentum rutrum laoreet quis, tristique eget neque.</a></span>
+						</section>
+		        <section class="edit edit-nav clearfix reminder-column col-md-2 col-xs-3">
+		        	<% if (event.class == 'pending') { %>
+				        <i class="fa fa-pencil col-xs-4 toggle-editable" />
+		          	<i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+				      <% } %>
+				      <% if (event.class == 'failed') { %>
+				        <i class="fa fa-pencil col-xs-4 toggle-editable" />
+		          	<i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+		          	<i class="fa fa-mail-reply col-xs-4 resend" />
+				      <% } %>
+				      <% if (event.class == 'delivered') { %>
+				        <i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+				      <% } %>
+		        </section>
+		      </li>
+		    <% }); %>
+	    </ul>
+	  <% } %>
+
+	  <% if(all_day.length) {%>
+			<ul class="reminder-list bg-burn padded">
+				<% _.each(all_day, function(event){ %>
+		      <li class="<%= event.class %>">
+		      	<section class="recipient reminder-column col-md-2 col-xs-3">
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Recipient Name" class="reminder-data is-editable">James Baxter</a></span>
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Phone Number" class="reminder-data is-editable">(214) 289 4321</a></span>
+						</section>
+						<section class="message reminder-column col-md-8 col-xs-6">
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Message" class="reminder-data is-editable">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac iaculis orci. Nunc interdum mauris id velit congue, at porttitor erat elementum. Curabitur dui felis, fermentum rutrum laoreet quis, tristique eget neque.</a></span>
+						</section>
+		        <section class="edit edit-nav clearfix reminder-column col-md-2 col-xs-3">
+		        	<% if (event.class == 'pending') { %>
+				        <i class="fa fa-pencil col-xs-4 toggle-editable" />
+		          	<i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+				      <% } %>
+				      <% if (event.class == 'failed') { %>
+				        <i class="fa fa-pencil col-xs-4 toggle-editable" />
+		          	<i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+		          	<i class="fa fa-mail-reply col-xs-4 resend" />
+				      <% } %>
+				      <% if (event.class == 'delivered') { %>
+				        <i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+				      <% } %>
+		        </section>
+		      </li>
+		    <% }); %>
+	    </ul>
+	  <% } %>
+
+	  <% if(after_time.length) {%>
+			<ul class="reminder-list bg-burn padded">
+				<% _.each(after_time, function(event){ %>
+		      <li class="<%= event.class %>">
+		      	<section class="recipient reminder-column col-md-2 col-xs-3">
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Recipient Name" class="reminder-data is-editable">James Baxter</a></span>
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Phone Number" class="reminder-data is-editable">(214) 289 4321</a></span>
+						</section>
+						<section class="message reminder-column col-md-8 col-xs-6">
+						  <span class="line"><a href="#" data-type="text" data-pk="1" data-title="Message" class="reminder-data is-editable">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac iaculis orci. Nunc interdum mauris id velit congue, at porttitor erat elementum. Curabitur dui felis, fermentum rutrum laoreet quis, tristique eget neque.</a></span>
+						</section>
+		        <section class="edit edit-nav clearfix reminder-column col-md-2 col-xs-3">
+		        	<% if (event.class == 'pending') { %>
+				        <i class="fa fa-pencil col-xs-4 toggle-editable" />
+		          	<i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+				      <% } %>
+				      <% if (event.class == 'failed') { %>
+				        <i class="fa fa-pencil col-xs-4 toggle-editable" />
+		          	<i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+		          	<i class="fa fa-mail-reply col-xs-4 resend" />
+				      <% } %>
+				      <% if (event.class == 'delivered') { %>
+				        <i class="fa fa-trash-o col-xs-4 toggle-destroy" />
+				      <% } %>
+		        </section>
+		      </li>
+		    <% }); %>
+	    </ul>
+	  <% } %>
+
+	  <% if(!by_hour.length && !before_time.length && !all_day.length && !after_time.length ) {%>
+	  	<h4 class="white hard-shadow center-text no-reminders">No reminders.</h4>
+	  	<a class="btn btn-primary btn-lg center-horizontal">Create Reminder</a>
+	  <% } %>
 	</div>
 </div>
