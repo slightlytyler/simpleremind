@@ -7,7 +7,7 @@ ul.reminder-list{
 
   &.is-destroying{
     .resend-reminder{ display: none; }
-    .destroy-reminder{ display: initial; }
+    .destroy-reminder{ display: block; }
   }
 
   &.padded{
