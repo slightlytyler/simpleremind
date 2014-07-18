@@ -175,6 +175,7 @@ GEM
     minitest (5.3.5)
     mocha (1.1.0)
       metaclass (~> 0.0.1)
+    modernizr-rails (2.7.1)
     multi_json (1.10.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -363,6 +364,7 @@ DEPENDENCIES
   jquery-ui-rails
   mailcatcher
   mocha
+  modernizr-rails
   pg
   rack-livereload
   rails (= 4.1.0)

@@ -54,6 +54,7 @@ gem 'devise'
 gem 'jquery-ui-rails'
 gem 'jquery-modal-rails'
 gem 'sidr-rails'
+gem 'modernizr-rails'
 
 group :development, :test do
   gem 'wirble'             # used to look better the console
