@@ -62,14 +62,18 @@ function pageLoad(){
 
   // Reminder side bar sizing
   var reminderSidebarHeight = $('.reminder-sidebar').height();
-  var reminderSidebarTitleHeight = $('.reminder-sidebar .inner .title').actualOuterHeight(true);
-  var reminderSidebarColumnHeadersHeight = $('.reminder-sidebar .column-headers').actualOuterHeight(true);
+  var reminderSidebarTitleHeight = $('.reminder-sidebar .title').actualOuterHeight(true);
+  var reminderSidebarColumnHeadersHeight = $('.reminder-sidebar .reminder-list-headers').actualOuterHeight(true);
   var reminderEditNavHeight = $('#reminder-edit-nav').actualHeight();
+  console.log(reminderSidebarHeight);
+  console.log(reminderSidebarTitleHeight);
+  console.log(reminderSidebarColumnHeadersHeight);
+  console.log(reminderEditNavHeight);
 
   $(window).resize(function() {
     reminderSidebarHeight = $('.reminder-sidebar').height();
-    reminderSidebarTitleHeight = $('.reminder-sidebar .inner .title').actualOuterHeight(true);
-    reminderSidebarColumnHeadersHeight = $('.reminder-sidebar .column-headers').actualOuterHeight(true);
+    reminderSidebarTitleHeight = $('.reminder-sidebar .title').actualOuterHeight(true);
+    reminderSidebarColumnHeadersHeight = $('.reminder-sidebar .reminder-list-headers').actualOuterHeight(true);
     reminderEditNavHeight = $('#reminder-edit-nav').actualHeight();
   });
 
