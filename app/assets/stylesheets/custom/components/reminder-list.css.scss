@@ -1,13 +1,18 @@
 ul.reminder-list{ 
-  //overflow: auto; 
+  overflow: auto; 
   margin-bottom: 0;
   width: 100%;
   list-style: none;
   padding-left: 0;
 
   &.is-destroying{
-    .resend-reminder{ display: none; }
+    .resend-reminder, .edit-reminder{ display: none; }
     .destroy-reminder{ display: block; }
+  }
+
+  &.is-editing{
+    .resend-reminder, .destroy-reminder{ display: none; }
+    .edit-reminder{ display: block; }
   }
 
   &.padded{
@@ -37,18 +42,17 @@ ul.reminder-list{
     display: inline-block;
   }
 
-  .resend-reminder, .destroy-reminder{
+  .resend-reminder, .destroy-reminder, .edit-reminder{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 8px;
   }
 
+  .destroy-reminder, .edit-reminder{ display: none; }
   .resend-reminder{ color: white; }
-  .destroy-reminder{
-    display: none;
-    color: $red-destroy;
-  }
+  .edit-reminder{ color: $yellow-edit; }
+  .destroy-reminder{ color: $red-destroy; }
 }
 
 .reminder-list-headers{ 
@@ -104,7 +108,7 @@ ul.reminder-list, .reminder-list-headers{
    }
 }
 
-.edit i, .resend-reminder, .destroy-reminder{ 
+.edit i, .resend-reminder, .destroy-reminder, .edit-reminder{ 
   padding: 0;
   font-size: 2.8rem; 
   opacity: .25;

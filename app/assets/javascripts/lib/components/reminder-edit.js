@@ -1,14 +1,14 @@
 $.fn.toggleEditable = function(state){
   if(state){
-    $('.is-editable').editable('enable');
+    this.parents().find('.reminder-list').addClass('is-editing');
     $('#toggle-editable').addClass('active');
   } 
   else if(state === false){
-    $('.is-editable').editable('disable');
+    this.parents().find('.reminder-list').removeClass('is-editing');
     $('#toggle-editable').removeClass('active');
   }
   else{
-    $('.is-editable').editable('toggleDisabled');
+    this.parents().find('.reminder-list').toggleClass('is-editing');
     $('#toggle-editable').toggleClass('active');
   }
 };
