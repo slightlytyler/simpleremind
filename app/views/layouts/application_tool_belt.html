@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Remind</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :modernizr %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width = device-width,initial-scale = 1.0,maximum-scale = 1.0" />
+  <script type="text/javascript" src="//use.typekit.net/gpg4qhc.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body class="bg-blue-s-light">
+
+  <%=render :partial=>"/layouts/tool_belt/header"%>
+  <%=render :partial=>"/layouts/alert"%>
+  <%= yield %>
+
+</body>
+</html>
