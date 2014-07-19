@@ -1,0 +1,11 @@
+// Style
+.circle{ border-radius: 50%; }
+
+.border{
+  position: absolute;
+
+  &.bottom{
+    bottom: -12px;
+    left: 0;
+  }
+}
