@@ -88,3 +88,5 @@ group :test do
    gem 'mocha', require: false
    # gem 'zeus','0.13.3'
 end
+
+gem 'rails_12factor', group: :production
